@@ -6,23 +6,32 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 lg:flex lg:items-center lg:justify-center bg-[#050509]">
+    <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 bg-[#050509]">
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20 z-0"
+        className="-top-40 left-0 md:left-60 md:-top-20 z-10"
         fill="white"
       />
       
-      {/* Background gradient effect - reduced opacity to not hide the 3D scene */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#050509] via-[#080a10] to-[#0B0D12] z-0 opacity-50" />
+      {/* 3D Scene Background - Full Coverage */}
+      <div className="absolute inset-0 z-0">
+        <SplineScene 
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="w-full h-full scale-125 md:scale-100 lg:scale-110 translate-x-1/4 md:translate-x-1/3 lg:translate-x-[20%]"
+        />
+      </div>
+
+      {/* Gradient Overlay for Text Readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#050509] via-[#050509]/80 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050509]/20 to-[#050509] z-0 pointer-events-none" />
       
-      <div className="container relative z-10 mx-auto px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+      <div className="container relative z-10 mx-auto px-4 md:px-6 h-full flex items-center">
+        <div className="max-w-2xl">
           {/* Left Column: Copy */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center space-y-8 relative z-20"
+            className="flex flex-col justify-center space-y-8"
           >
             <div className="space-y-4">
               <motion.div 
@@ -35,14 +44,14 @@ export default function Hero() {
                 AI Employees for Real Businesses
               </motion.div>
               
-              <h1 className="text-4xl font-display font-bold tracking-tight text-white sm:text-6xl xl:text-7xl">
+              <h1 className="text-4xl font-display font-bold tracking-tight text-white sm:text-6xl xl:text-7xl drop-shadow-2xl">
                 The Brain That <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   Never Logs Out
                 </span>
               </h1>
               
-              <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl leading-relaxed">
+              <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl leading-relaxed drop-shadow-lg">
                 BlackSync AI isn’t just answering phones; it’s plugged into your calendar, your CRM, your point of sale, your entire workflow.
               </p>
             </div>
@@ -88,19 +97,6 @@ export default function Hero() {
             <p className="text-xs text-muted-foreground/60 pt-4 border-t border-white/5">
               Trusted by teams in real estate, healthcare, home services, automotive, and education.
             </p>
-          </motion.div>
-
-          {/* Right Column: 3D Element */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9, x: 20 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[600px] w-full flex items-center justify-center lg:h-[800px] lg:-ml-20 lg:-mt-20 z-30 pointer-events-none md:pointer-events-auto"
-          >
-             <SplineScene 
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full scale-110 lg:scale-125"
-            />
           </motion.div>
         </div>
       </div>
