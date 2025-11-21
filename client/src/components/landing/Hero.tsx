@@ -92,14 +92,14 @@ export default function Hero() {
 
           {/* Right Column: 3D Element */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.9, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[600px] w-full flex items-center justify-center lg:h-[700px]"
+            className="relative h-[600px] w-full flex items-center justify-center lg:h-[800px] lg:-ml-20 lg:-mt-20 z-30 pointer-events-none md:pointer-events-auto"
           >
              <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full"
+              className="w-full h-full scale-110 lg:scale-125"
             />
           </motion.div>
         </div>
