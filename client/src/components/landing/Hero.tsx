@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
 import { Phone, Database, Mail, Calendar, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/glowing_3d_ai_brain_network_node_for_hero_section.png";
+import { SplineScene } from "@/components/ui/splite";
+import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 lg:flex lg:items-center lg:justify-center bg-[#050509]">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
+      
       {/* Background gradient effect */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#050509] via-[#080a10] to-[#0B0D12] z-0" />
       
@@ -16,7 +22,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col justify-center space-y-8"
+            className="flex flex-col justify-center space-y-8 relative z-20"
           >
             <div className="space-y-4">
               <motion.div 
@@ -89,54 +95,16 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex justify-center items-center"
+            className="relative h-[500px] w-full hidden lg:block"
           >
-            <div className="relative w-full max-w-[600px] aspect-square">
-              {/* Glow effects */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary/20 blur-[100px] rounded-full" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-secondary/20 blur-[80px] rounded-full mix-blend-screen" />
-              
-              {/* Main Image */}
-              <motion.img 
-                src={heroImage} 
-                alt="AI Brain Network"
-                className="relative z-10 w-full h-full object-contain drop-shadow-2xl"
-                animate={{ 
-                  y: [0, -15, 0],
-                  rotate: [0, 1, 0, -1, 0]
-                }}
-                transition={{ 
-                  duration: 6, 
-                  repeat: Infinity,
-                  ease: "easeInOut" 
-                }}
-              />
-              
-              {/* Floating Orbiting Icons */}
-              {[
-                { Icon: Phone, color: "text-primary", bg: "bg-primary/10", border: "border-primary/20", delay: 0, x: 40, y: -40 },
-                { Icon: Database, color: "text-secondary", bg: "bg-secondary/10", border: "border-secondary/20", delay: 1, x: -40, y: 20 },
-                { Icon: Mail, color: "text-accent", bg: "bg-accent/10", border: "border-accent/20", delay: 2, x: 30, y: 50 },
-                { Icon: Calendar, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20", delay: 3, x: -30, y: -50 },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  className={`absolute top-1/2 left-1/2 p-3 rounded-xl glass-card ${item.border} backdrop-blur-xl z-20`}
-                  animate={{
-                    x: [item.x, item.x + (index % 2 === 0 ? 10 : -10), item.x],
-                    y: [item.y, item.y + (index % 2 === 0 ? -10 : 10), item.y],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    delay: item.delay,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <item.Icon className={`h-6 w-6 ${item.color}`} />
-                </motion.div>
-              ))}
-            </div>
+             <SplineScene 
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+            />
+            
+            {/* Overlay gradients to blend the 3D scene better */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-l from-[#050509] via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </div>
       </div>
