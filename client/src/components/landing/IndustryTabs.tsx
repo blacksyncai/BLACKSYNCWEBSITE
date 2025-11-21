@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Stethoscope, Wrench, Car, GraduationCap, Briefcase } from "lucide-react";
+import { Building2, Stethoscope, Wrench, Car, GraduationCap, Briefcase, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const industries = [
   {
@@ -9,6 +10,8 @@ const industries = [
     label: "Real Estate",
     icon: Building2,
     color: "text-blue-400",
+    link: "https://blacksyncrealestate.com",
+    linkText: "Check Out BlackSync for Real Estate",
     points: [
       "Calls your CRM ponds (buyer, seller, FSBO) to qualify and re-activate leads.",
       "Handles missed calls from signs, portals, and website.",
@@ -20,6 +23,8 @@ const industries = [
     label: "Healthcare",
     icon: Stethoscope,
     color: "text-emerald-400",
+    link: "https://blacksync.clinic",
+    linkText: "Check Out BlackSync for Clinics",
     points: [
       "Answers overflow calls and after-hours calls.",
       "Books, reschedules, and confirms appointments.",
@@ -113,29 +118,48 @@ export default function IndustryTabs() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="h-full p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm"
+                className="h-full p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col justify-between"
               >
-                <div className="flex items-center gap-4 mb-8">
-                  <div className={cn("p-3 rounded-xl bg-white/5", activeTab.color)}>
-                    <activeTab.icon className="h-8 w-8" />
+                <div>
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className={cn("p-3 rounded-xl bg-white/5", activeTab.color)}>
+                      <activeTab.icon className="h-8 w-8" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">{activeTab.label} Solutions</h3>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{activeTab.label} Solutions</h3>
+
+                  <ul className="space-y-6">
+                    {activeTab.points.map((point, index) => (
+                      <motion.li 
+                        key={index}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-start gap-4"
+                      >
+                        <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                        <p className="text-lg text-gray-300 leading-relaxed">{point}</p>
+                      </motion.li>
+                    ))}
+                  </ul>
                 </div>
 
-                <ul className="space-y-6">
-                  {activeTab.points.map((point, index) => (
-                    <motion.li 
-                      key={index}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start gap-4"
-                    >
-                      <div className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" />
-                      <p className="text-lg text-gray-300 leading-relaxed">{point}</p>
-                    </motion.li>
-                  ))}
-                </ul>
+                {/* Industry Specific Link */}
+                {activeTab.link && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4 }}
+                    className="mt-10 pt-6 border-t border-white/10"
+                  >
+                    <a href={activeTab.link} target="_blank" rel="noopener noreferrer">
+                      <Button className="w-full sm:w-auto bg-primary/20 hover:bg-primary/30 text-primary hover:text-primary-foreground border border-primary/50 font-semibold">
+                        {activeTab.linkText}
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </Button>
+                    </a>
+                  </motion.div>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>
