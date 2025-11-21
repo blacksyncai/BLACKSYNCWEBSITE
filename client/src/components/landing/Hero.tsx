@@ -8,12 +8,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 lg:flex lg:items-center lg:justify-center bg-[#050509]">
       <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
+        className="-top-40 left-0 md:left-60 md:-top-20 z-0"
         fill="white"
       />
       
-      {/* Background gradient effect */}
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#050509] via-[#080a10] to-[#0B0D12] z-0" />
+      {/* Background gradient effect - reduced opacity to not hide the 3D scene */}
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#050509] via-[#080a10] to-[#0B0D12] z-0 opacity-50" />
       
       <div className="container relative z-10 mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
@@ -95,16 +95,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative h-[500px] w-full hidden lg:block"
+            className="relative h-[600px] w-full flex items-center justify-center lg:h-[700px]"
           >
              <SplineScene 
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
             />
-            
-            {/* Overlay gradients to blend the 3D scene better */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050509] via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 bg-gradient-to-l from-[#050509] via-transparent to-transparent pointer-events-none" />
           </motion.div>
         </div>
       </div>
