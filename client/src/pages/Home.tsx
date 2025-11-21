@@ -7,6 +7,7 @@ import Timeline from "@/components/landing/Timeline";
 import ComparisonTable from "@/components/landing/ComparisonTable";
 import Pricing from "@/components/landing/Pricing";
 import Testimonials from "@/components/landing/Testimonials";
+import ContactForm from "@/components/landing/ContactForm";
 import Footer from "@/components/landing/Footer";
 
 export default function Home() {
@@ -56,6 +57,7 @@ export default function Home() {
       </div>
       <Testimonials />
       <Pricing />
+      <ContactForm />
       <Footer />
     </div>
   );
