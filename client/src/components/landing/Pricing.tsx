@@ -60,10 +60,12 @@ export default function Pricing() {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className={`w-full ${plan.highlight ? 'bg-primary hover:bg-primary/90' : 'bg-white/10 hover:bg-white/20 text-white'}`}>
-                  {plan.cta}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button className={`w-full ${plan.highlight ? 'bg-primary hover:bg-primary/90' : 'bg-white/10 hover:bg-white/20 text-white'}`}>
+                    {plan.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}

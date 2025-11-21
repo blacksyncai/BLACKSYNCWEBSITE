@@ -16,9 +16,11 @@ export default function Footer() {
               Tell us about your business. We’ll show you exactly what BlackSync AI would handle for you in the first 30 days.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg">
-                Book a Strategy Call
-              </Button>
+              <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg w-full sm:w-auto">
+                  Book a Strategy Call
+                </Button>
+              </a>
               <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 h-12 rounded-full text-lg">
                 Watch Product Demo
               </Button>

@@ -57,10 +57,12 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 h-12 rounded-full shadow-[0_0_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.6)] transition-all">
-                Book a Strategy Call
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 h-12 rounded-full shadow-[0_0_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.6)] transition-all w-full sm:w-auto">
+                  Book a Strategy Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </a>
               <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white h-12 rounded-full backdrop-blur-sm">
                 <Play className="mr-2 h-4 w-4 fill-current" />
                 Watch a Live Demo
