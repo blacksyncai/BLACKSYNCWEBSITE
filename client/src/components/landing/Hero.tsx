@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Phone, Database, Mail, Calendar, ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SplineScene } from "@/components/ui/splite";
+import { SplineScene } from "@/components/ui/spline";
 import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
