@@ -36,7 +36,8 @@ export default function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     try {
-      const response = await fetch("/api/contact", {
+      // Submit to Formspree for email notification
+      const formspreeResponse = await fetch("https://formspree.io/f/xovrgabj", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,7 +45,16 @@ export default function ContactForm() {
         body: JSON.stringify(values),
       });
 
-      if (!response.ok) {
+      // Also save to database for backup
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!formspreeResponse.ok) {
         throw new Error("Failed to submit");
       }
 
@@ -56,7 +66,7 @@ export default function ContactForm() {
     } catch (error) {
       toast({
         title: "Submission Failed",
-        description: "Something went wrong. Please try again or email us directly.",
+        description: "Something went wrong. Please try again or email us directly at Blacksync.ai@gmail.com",
         variant: "destructive",
       });
     } finally {
