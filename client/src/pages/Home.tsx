@@ -1,4 +1,5 @@
 import Hero from "@/components/landing/Hero";
+import TrustedBy from "@/components/landing/TrustedBy";
 import FeatureGrid from "@/components/landing/FeatureGrid";
 import Integrations from "@/components/landing/Integrations";
 import BlueprintSchematic from "@/components/landing/BlueprintSchematic";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Hero />
+      <TrustedBy />
       <FeatureGrid />
       <Integrations />
       <BlueprintSchematic />
