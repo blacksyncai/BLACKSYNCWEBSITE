@@ -1,3 +1,4 @@
+import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import TrustedBy from "@/components/landing/TrustedBy";
 import FeatureGrid from "@/components/landing/FeatureGrid";
@@ -14,6 +15,7 @@ import Footer from "@/components/landing/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
+      <Navbar />
       <Hero />
       <TrustedBy />
       <FeatureGrid />
