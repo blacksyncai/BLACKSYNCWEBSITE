@@ -37,16 +37,13 @@ export default function Navbar() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-3" data-testid="logo-link">
+          <a href="/" className="flex items-center" data-testid="logo-link">
             <img 
               src="/logo.jpg" 
               alt="BlackSync AI" 
-              className="h-10 md:h-12 w-auto"
+              className="h-12 md:h-14 w-auto"
               data-testid="logo-image"
             />
-            <span className="text-white font-bold text-lg md:text-xl tracking-tight hidden sm:block">
-              BlackSync AI
-            </span>
           </a>
 
           {/* Desktop Navigation */}

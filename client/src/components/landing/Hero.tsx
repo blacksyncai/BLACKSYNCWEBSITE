@@ -63,10 +63,12 @@ export default function Hero() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
-              <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white h-12 rounded-full backdrop-blur-sm">
-                <Play className="mr-2 h-4 w-4 fill-current" />
-                Watch a Live Demo
-              </Button>
+              <a href="#industries">
+                <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white h-12 rounded-full backdrop-blur-sm w-full sm:w-auto">
+                  <Play className="mr-2 h-4 w-4 fill-current" />
+                  Watch Demo for Your Industry
+                </Button>
+              </a>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground pt-4">

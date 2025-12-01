@@ -81,12 +81,13 @@ export default function IndustryTabs() {
   const [activeTab, setActiveTab] = useState(industries[0]);
 
   return (
-    <section className="py-24 bg-[#0B0D12]">
+    <section id="industries" className="py-24 bg-[#0B0D12] scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             AI employees tuned to your industry.
           </h2>
+          <p className="text-gray-400 text-lg">Watch demos tailored to your specific business needs</p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8">
