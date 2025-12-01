@@ -7,6 +7,7 @@ export default function TrustedBy() {
     { name: "Alphapro Consulting", category: "Consulting" },
     { name: "Distinctive Dental", category: "Healthcare" },
     { name: "Broadway Auto Shop", category: "Automotive" },
+    { name: "Al Suhami Holding Co.", category: "Trade & Manufacturing - Saudi Arabia" },
   ];
 
   return (
@@ -33,7 +34,7 @@ export default function TrustedBy() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
           {companies.map((company, index) => (
             <motion.div
               key={company.name}
@@ -66,7 +67,7 @@ export default function TrustedBy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: companies.length * 0.1 }}
-            className="group relative col-span-2 md:col-span-3 lg:col-span-5"
+            className="group relative col-span-2 md:col-span-3 lg:col-span-6"
             data-testid="company-many-more"
           >
             <div className="relative bg-gradient-to-br from-primary/10 to-cyan-500/10 backdrop-blur-sm border border-primary/20 rounded-xl p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/30">
