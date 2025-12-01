@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Building2, Stethoscope, Wrench, Car, GraduationCap, Briefcase, ExternalLink } from "lucide-react";
+import { Building2, Stethoscope, Wrench, Car, GraduationCap, Briefcase, Factory, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -73,6 +73,18 @@ const industries = [
       "White-label AI solutions for your clients.",
       "Automates client reporting and updates.",
       "Scales lead qualification for high-volume campaigns."
+    ]
+  },
+  {
+    id: "trade-manufacturing",
+    label: "Trade & Manufacturing",
+    icon: Factory,
+    color: "text-cyan-400",
+    points: [
+      "Automates supplier and vendor communications.",
+      "Handles order inquiries and status updates.",
+      "Streamlines B2B lead qualification and follow-ups.",
+      "Proudly supporting Al Suhami Holding Company in Saudi Arabia."
     ]
   }
 ];
