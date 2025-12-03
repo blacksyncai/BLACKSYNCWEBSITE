@@ -5,6 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
+import DisplayCards from "@/components/ui/display-cards";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -412,7 +413,7 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
               <Users className="h-8 w-8 text-primary" />
@@ -420,11 +421,47 @@ export default function About() {
                 The Team
               </h2>
             </div>
-            <p className="text-gray-400">A small, elite, engineering-first crew.</p>
+            <p className="text-gray-400 text-lg">A small, elite, engineering-first crew.</p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
-            {team.map((member, i) => (
+          {/* Display Cards for Team */}
+          <div className="flex justify-center mb-16">
+            <DisplayCards 
+              cards={[
+                {
+                  icon: <Brain className="size-4 text-cyan-300" />,
+                  title: team[0].name,
+                  description: team[0].role,
+                  date: team[0].desc,
+                  iconClassName: "bg-cyan-800",
+                  titleClassName: "text-cyan-400",
+                  className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                },
+                {
+                  icon: <Cpu className="size-4 text-purple-300" />,
+                  title: team[1].name,
+                  description: team[1].role,
+                  date: team[1].desc,
+                  iconClassName: "bg-purple-800",
+                  titleClassName: "text-purple-400",
+                  className: "[grid-area:stack] translate-x-12 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                },
+                {
+                  icon: <Cog className="size-4 text-blue-300" />,
+                  title: team[2].name,
+                  description: team[2].role,
+                  date: team[2].desc,
+                  iconClassName: "bg-blue-800",
+                  titleClassName: "text-blue-400",
+                  className: "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
+                },
+              ]}
+            />
+          </div>
+
+          {/* Remaining team members in grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
+            {team.slice(3).map((member, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
