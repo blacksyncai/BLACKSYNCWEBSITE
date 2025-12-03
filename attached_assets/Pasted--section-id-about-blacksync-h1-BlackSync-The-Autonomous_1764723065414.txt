@@ -1,0 +1,80 @@
+<section id="about-blacksync">
+<h1>BlackSync: The Autonomous Operations Platform</h1>
+<p class="lead">We engineer and deploy <strong>AI Operational Systems</strong>—the high-performance, autonomous backbone that runs your entire business front-office and back-office.</p>
+
+<div class="mission-statement">
+<p>We are not a chatbot company; we build mission-critical infrastructure. Our multi-agent architecture replaces resource-heavy, repetitive human workflows with self-governing AI systems that achieve unmatched speed, accuracy, and seamless integration into your entire data ecosystem.</p>
+</div>
+
+<hr>
+
+<h2>What Defines Autonomous Operations</h2>
+
+<div class="feature-group">
+<h3>1. 🎤 AI Operators (Voice, Chat, and Multi-Channel)</h3>
+<p>These are integrated, business-aware agents—not scripts—that handle high-volume communication with human-level nuance and system-level efficiency.</p>
+<ul>
+<li><strong>Real-time Voice Handling:</strong> **Missed inbound calls are instantly picked up by a dedicated AI employee** for real-time handling, qualification, and routing—eliminating the need for outdated missed-call SMS recovery.</li>
+<li><strong>Intake & Qualification:</strong> Autonomous lead qualification, deep-context routing, and dynamic scoring.</li>
+<li><strong>Transaction Logic:</strong> Instantaneous <strong>quote generation</strong> based on internal pricing rules and full calendar control with scheduling logic.</li>
+<li><strong>Persistent Follow-up:</strong> Multi-channel communication and recovery across SMS, email, and WhatsApp.</li>
+<li><strong>CRM Action:</strong> Real-time data updates, workflow triggers, and schema enforcement within your core systems.</li>
+</ul>
+</div>
+
+<div class="feature-group">
+<h3>2. Workflow Engines & System Automation</h3>
+<p>The internal logic that guarantees your operation is predictable, consistent, and fast:</p>
+<ul>
+<li>Advanced lead revival and pipeline management systems.</li>
+<li><strong>Autonomous payment, invoicing, and collections flows.</strong></li>
+<li>Routing, compliance, and SLA logic governance.</li>
+<li>High-volume data enrichment, pipeline cleanup, and multi-system syncing.</li>
+</ul>
+</div>
+
+<hr>
+
+<h2>Full-Stack Engineering & System Architecture</h2>
+<p>Beyond the AI agents, BlackSync handles the entire technology stack to ensure zero-downtime integration and complete control:</p>
+<ul>
+<li>Custom CRMs, client portals, and internal business intelligence (BI) dashboards.</li>
+<li>Web & mobile application development.</li>
+<li>Payment infrastructure integration (Stripe, Qliq, QuickBooks) and scheduling platforms.</li>
+<li>Deep, robust API integration expertise (Zoho, ServiceMonster, Odoo, Airtable, Supabase, etc.).</li>
+</ul>
+
+<hr>
+
+<h2>🧠 Technology & The Elite Team</h2>
+
+<div class="team-tech-grid">
+<div class="technology">
+<h4>Technology Backbone</h4>
+<ul>
+<li><strong>NVIDIA AI Foundry Stack:</strong> The technological foundation for enterprise scale: NeMo (industry-tuned models), NIM (high-performance microservices), and DGX Cloud (enterprise training).</li>
+<li><strong>BlackSync Orchestration Engine:</strong> Our proprietary router that transforms AI from "assistant" to "autonomous workforce" by deciding <strong>who acts, what logic to apply, and which system to trigger.</strong></li>
+</ul>
+</div>
+<div class="team">
+<h4>The Elite Crew</h4>
+<ul>
+<li><strong>Hamza Basal</strong> (Founder / Systems Architect) & **Rook** (Chief Systems Architect / Head of AI Infrastructure) lead model engineering and multi-agent deployment.</li>
+<li><strong>Vex</strong> (Lead Voice Pipeline Engineer) ensures cutting-edge telephony logic, real-time voice routing, and orchestration.</li>
+<li><strong>Alpha Pro Consulting Partnership:</strong> Delivers the necessary enterprise data infrastructure (governance, security, compliance) for scale across MENA, Europe, and Africa.</li>
+</ul>
+</div>
+</div>
+
+<hr>
+
+<h2>Our Philosophy: Operational Leverage</h2>
+<p>We don’t automate tasks. <strong>We rebuild operations.</strong></p>
+<ul class="philosophy-points">
+<li><strong>Systems</strong> over Staff</li>
+<li><strong>Intelligence</strong> over Scripts</li>
+<li><strong>Data</strong> over Opinions</li>
+</ul>
+<p class="closing-statement">BlackSync creates the <strong>unfair operational leverage</strong> that sets industry leaders apart. This is the new backbone of modern business.</p>
+
+</section>
