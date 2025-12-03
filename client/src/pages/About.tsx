@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
+import { GridBackground } from "@/components/ui/glowing-card";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -33,32 +34,28 @@ export default function About() {
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
-        
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto text-center"
+            className="max-w-5xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-6">
-              About{" "}
-              <span className="bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent">
-                BlackSync
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-              BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center text-lg">
-              <div className="bg-white/5 border border-white/10 rounded-full px-6 py-3">
-                <span className="text-gray-400">We don't build chatbots.</span>
+            <GridBackground
+              title="About BlackSync"
+              description="BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication."
+              showAvailability={true}
+              className="rounded-2xl"
+            >
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-lg mt-8">
+                <div className="bg-white/5 border border-white/10 rounded-full px-6 py-3">
+                  <span className="text-gray-400">We don't build chatbots.</span>
+                </div>
+                <div className="bg-primary/20 border border-primary/30 rounded-full px-6 py-3">
+                  <span className="text-primary font-semibold">We build infrastructure.</span>
+                </div>
               </div>
-              <div className="bg-primary/20 border border-primary/30 rounded-full px-6 py-3">
-                <span className="text-primary font-semibold">We build infrastructure.</span>
-              </div>
-            </div>
+            </GridBackground>
           </motion.div>
         </div>
       </section>
