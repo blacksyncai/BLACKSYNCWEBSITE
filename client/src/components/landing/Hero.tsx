@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Phone, Database, Mail, Calendar, ArrowRight, Play } from "lucide-react";
+import { Phone, Database, Mail, Calendar, ArrowRight, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SplineScene } from "@/components/ui/spline";
 import { Spotlight } from "@/components/ui/spotlight";
+import { Link } from "wouter";
 
 export default function Hero() {
   return (
@@ -63,12 +64,15 @@ export default function Hero() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
-              <a href="#industries">
-                <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 hover:text-white h-12 rounded-full backdrop-blur-sm w-full sm:w-auto">
-                  <Play className="mr-2 h-4 w-4 fill-current" />
-                  Watch Demo for Your Industry
+              <Link href="/about">
+                <Button size="lg" className="relative h-12 px-6 overflow-hidden bg-zinc-900 transition-all duration-200 group rounded-full w-full sm:w-auto">
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500" />
+                  <div className="relative flex items-center justify-center gap-2">
+                    <span className="text-white font-semibold">Inside BlackSync AI</span>
+                    <ArrowUpRight className="w-4 h-4 text-white/90" />
+                  </div>
                 </Button>
-              </a>
+              </Link>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-muted-foreground pt-4">
