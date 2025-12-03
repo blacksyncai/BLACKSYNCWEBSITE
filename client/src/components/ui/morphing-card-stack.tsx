@@ -112,7 +112,7 @@ export function MorphingCardStack({
               className={cn(
                 "rounded-md p-2 transition-all",
                 layout === mode
-                  ? "bg-primary text-white"
+                  ? "bg-green-500 text-white"
                   : "text-gray-400 hover:text-white hover:bg-white/10",
               )}
               aria-label={`Switch to ${mode} layout`}
@@ -160,13 +160,13 @@ export function MorphingCardStack({
                     onCardClick?.(card)
                   }}
                   className={cn(
-                    "cursor-pointer rounded-xl border border-white/20 bg-[#0B0D12] p-4",
-                    "hover:border-primary/50 transition-colors",
+                    "cursor-pointer rounded-xl border border-green-500/30 bg-[#0B0D12] p-4",
+                    "hover:border-green-500/60 transition-colors",
                     layout === "stack" && "absolute w-56 h-48",
                     layout === "stack" && isTopCard && "cursor-grab active:cursor-grabbing",
                     layout === "grid" && "w-full aspect-square",
                     layout === "list" && "w-full",
-                    isExpanded && "ring-2 ring-primary",
+                    isExpanded && "ring-2 ring-green-500",
                   )}
                   style={{
                     backgroundColor: card.color || undefined,
@@ -174,7 +174,7 @@ export function MorphingCardStack({
                 >
                   <div className="flex items-start gap-3">
                     {card.icon && (
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white/10 text-primary">
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-500/20 text-green-400">
                         {card.icon}
                       </div>
                     )}
@@ -213,7 +213,7 @@ export function MorphingCardStack({
               onClick={() => setActiveIndex(index)}
               className={cn(
                 "h-1.5 rounded-full transition-all",
-                index === activeIndex ? "w-4 bg-primary" : "w-1.5 bg-gray-600 hover:bg-gray-500",
+                index === activeIndex ? "w-4 bg-green-500" : "w-1.5 bg-gray-600 hover:bg-gray-500",
               )}
               aria-label={`Go to card ${index + 1}`}
             />
