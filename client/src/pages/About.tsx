@@ -144,7 +144,7 @@ export default function About() {
               <ul className="space-y-3">
                 {[
                   "Lead revival systems",
-                  "Missed-call → SMS recovery",
+                  "Missed calls? Doesn't happen. AI re-routes so you never miss a call or use voicemail again",
                   "Automated payment & invoice flows",
                   "Data enrichment & pipeline cleanup",
                   "Routing, compliance, SLA logic",
