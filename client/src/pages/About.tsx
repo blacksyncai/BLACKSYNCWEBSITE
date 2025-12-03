@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mic, Cog, Code, Brain, Users, ArrowRight, Phone, MessageSquare, Calendar, FileText, CreditCard, Database, Globe, Shield, Zap, Cpu, Cloud, Server, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
+import { WarpBackground } from "@/components/ui/warp-background";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -289,55 +290,62 @@ export default function About() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <div className="flex items-center gap-4 mb-8">
-              <div className="p-3 rounded-xl bg-green-500/20 text-green-400">
-                <Shield className="h-6 w-6" />
-              </div>
-              <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">
-                Enterprise Data Infrastructure (Alpha Pro Partnership)
-              </h2>
-            </div>
-            
-            <p className="text-gray-400 mb-6">
-              BlackSync partners with <strong className="text-white">Alpha Pro Consulting</strong>, a leading enterprise data firm specializing in:
-            </p>
-            
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              {[
-                "AI-driven data management",
-                "Cloud infrastructure",
-                "Cybersecurity",
-                "Data governance & compliance",
-                "High-volume ETL & pipelines",
-                "Enterprise consulting & staffing"
-              ].map((item, i) => (
-                <div key={i} className="bg-green-500/10 border border-green-500/20 rounded-lg p-3 text-center text-gray-300 text-sm">
-                  {item}
+            <WarpBackground 
+              className="bg-gradient-to-br from-red-950/30 to-[#050509]"
+              gridColor="rgba(239, 68, 68, 0.2)"
+              beamDuration={4}
+              beamsPerSide={4}
+            >
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 rounded-xl bg-red-500/20 text-red-400">
+                  <Shield className="h-6 w-6" />
                 </div>
-              ))}
-            </div>
-
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-6">
-              <h4 className="text-white font-semibold mb-4">Together, BlackSync + Alpha Pro deliver:</h4>
-              <ul className="space-y-2">
+                <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">
+                  Enterprise Data Infrastructure (Alpha Pro Partnership)
+                </h2>
+              </div>
+              
+              <p className="text-gray-400 mb-6">
+                BlackSync partners with <strong className="text-red-400">Alpha Pro Consulting</strong>, a leading enterprise data firm specializing in:
+              </p>
+              
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
                 {[
-                  "AI systems + the data backbone they run on",
-                  "Secure, governed, enterprise-grade deployments",
-                  "Zero-downtime integrations",
-                  "Full Ops + full Data + full AI stack"
+                  "AI-driven data management",
+                  "Cloud infrastructure",
+                  "Cybersecurity",
+                  "Data governance & compliance",
+                  "High-volume ETL & pipelines",
+                  "Enterprise consulting & staffing"
                 ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-gray-300">
-                    <Zap className="h-4 w-4 text-green-400" />
+                  <div key={i} className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-center text-gray-300 text-sm">
                     {item}
-                  </li>
+                  </div>
                 ))}
-              </ul>
-            </div>
+              </div>
 
-            <p className="text-center text-gray-400 italic">
-              This is the difference between an AI feature and{" "}
-              <span className="text-white font-semibold">a real enterprise system.</span>
-            </p>
+              <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 mb-6">
+                <h4 className="text-white font-semibold mb-4">Together, BlackSync + Alpha Pro deliver:</h4>
+                <ul className="space-y-2">
+                  {[
+                    "AI systems + the data backbone they run on",
+                    "Secure, governed, enterprise-grade deployments",
+                    "Zero-downtime integrations",
+                    "Full Ops + full Data + full AI stack"
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-gray-300">
+                      <Zap className="h-4 w-4 text-red-400" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <p className="text-center text-gray-400 italic">
+                This is the difference between an AI feature and{" "}
+                <span className="text-red-400 font-semibold">a real enterprise system.</span>
+              </p>
+            </WarpBackground>
           </motion.div>
         </div>
       </section>
