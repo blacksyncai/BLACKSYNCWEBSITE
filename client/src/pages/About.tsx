@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Mic, Cog, Code, Brain, Users, ArrowRight, Phone, MessageSquare, Calendar, FileText, CreditCard, Database, Globe, Shield, Zap } from "lucide-react";
+import { Mic, Cog, Code, Brain, Users, ArrowRight, Phone, MessageSquare, Calendar, FileText, CreditCard, Database, Globe, Shield, Zap, Cpu, Cloud, Server, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -233,33 +234,36 @@ export default function About() {
             <p className="text-gray-400 text-lg">Built on NVIDIA's AI Foundry Stack</p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-            {[
-              { title: "NVIDIA NeMo", desc: "Industry-tuned models trained on real workflows, SOPs, pricing rules, CRM schemas, and operational data.", color: "primary" },
-              { title: "NVIDIA NIM", desc: "Every agent becomes a dedicated high-performance microservice (voice agents, schedulers, quoting engines, follow-up agents, collections bots).", color: "cyan" },
-              { title: "NVIDIA DGX Cloud", desc: "Enterprise-grade training, fine-tuning, and multi-agent inference at scale.", color: "purple" },
-              { title: "BlackSync Orchestration Engine", desc: "Our router decides: Who acts, what logic to apply, what data to update, which system to trigger.", color: "green" },
-            ].map((tech, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`bg-${tech.color === 'primary' ? 'primary' : tech.color === 'cyan' ? 'cyan-500' : tech.color === 'purple' ? 'purple-500' : 'green-500'}/10 border border-${tech.color === 'primary' ? 'primary' : tech.color === 'cyan' ? 'cyan-500' : tech.color === 'purple' ? 'purple-500' : 'green-500'}/20 rounded-2xl p-6`}
-                style={{
-                  background: tech.color === 'primary' ? 'rgba(37, 99, 235, 0.1)' : 
-                              tech.color === 'cyan' ? 'rgba(34, 211, 238, 0.1)' : 
-                              tech.color === 'purple' ? 'rgba(168, 85, 247, 0.1)' : 'rgba(34, 197, 94, 0.1)',
-                  borderColor: tech.color === 'primary' ? 'rgba(37, 99, 235, 0.2)' : 
-                               tech.color === 'cyan' ? 'rgba(34, 211, 238, 0.2)' : 
-                               tech.color === 'purple' ? 'rgba(168, 85, 247, 0.2)' : 'rgba(34, 197, 94, 0.2)'
-                }}
-              >
-                <h3 className="text-white font-bold mb-3">{tech.title}</h3>
-                <p className="text-gray-400 text-sm">{tech.desc}</p>
-              </motion.div>
-            ))}
+          <div className="max-w-md mx-auto mb-12">
+            <MorphingCardStack
+              defaultLayout="stack"
+              cards={[
+                {
+                  id: "nemo",
+                  title: "NVIDIA NeMo",
+                  description: "Industry-tuned models trained on real workflows, SOPs, pricing rules, CRM schemas, and operational data.",
+                  icon: <Cpu className="h-5 w-5" />,
+                },
+                {
+                  id: "nim",
+                  title: "NVIDIA NIM",
+                  description: "Every agent becomes a dedicated high-performance microservice (voice agents, schedulers, quoting engines, follow-up agents, collections bots).",
+                  icon: <Server className="h-5 w-5" />,
+                },
+                {
+                  id: "dgx",
+                  title: "NVIDIA DGX Cloud",
+                  description: "Enterprise-grade training, fine-tuning, and multi-agent inference at scale.",
+                  icon: <Cloud className="h-5 w-5" />,
+                },
+                {
+                  id: "orchestration",
+                  title: "BlackSync Orchestration Engine",
+                  description: "Our router decides: Who acts, what logic to apply, what data to update, which system to trigger.",
+                  icon: <Route className="h-5 w-5" />,
+                },
+              ]}
+            />
           </div>
 
           <motion.div
