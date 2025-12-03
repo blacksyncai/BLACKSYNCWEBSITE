@@ -1,0 +1,217 @@
+About BlackSync
+
+BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+
+We don’t build chatbots.
+We build infrastructure.
+
+Our multi-agent architecture replaces repetitive human workflows with autonomous AI systems that operate with speed, accuracy, and full integration into your data stack.
+
+What We Power
+AI Operators (Voice + Chat)
+
+Autonomous, integrated, business-aware.
+
+Real-time call handling
+
+Lead qualification & routing
+
+Scheduling logic & calendar control
+
+Quote generation with pricing rules
+
+Multi-channel follow-up (SMS, email, WhatsApp)
+
+CRM updates & workflow triggers
+
+These aren’t scripts.
+These are operational agents.
+
+Workflow Engines & System Automation
+
+We build the internal engines that run daily operations:
+
+Lead revival systems
+
+Missed-call → SMS recovery
+
+Automated payment & invoice flows
+
+Data enrichment & pipeline cleanup
+
+Routing, compliance, SLA logic
+
+Multi-system syncing & reporting
+
+Embedded business logic
+
+Your operation becomes predictable, consistent, and fast.
+
+Full-Stack Engineering
+
+Beyond AI, we build:
+
+Web & mobile applications
+
+Custom CRMs & client portals
+
+Scheduling & dispatch platforms
+
+Payment infrastructures (Stripe, Qliq, QuickBooks)
+
+Internal admin tools + BI dashboards
+
+Deep API integrations (Zoho, Sierra, ServiceMonster, Odoo, Airtable, Supabase, etc.)
+
+From idea → architecture → deployment.
+BlackSync handles the entire stack.
+
+Technology Backbone
+
+Built on NVIDIA’s AI Foundry Stack:
+
+NVIDIA NeMo
+
+Industry-tuned models trained on real workflows, SOPs, pricing rules, CRM schemas, and operational data.
+
+NVIDIA NIM
+
+Every agent becomes a dedicated high-performance microservice (voice agents, schedulers, quoting engines, follow-up agents, collections bots).
+
+NVIDIA DGX Cloud
+
+Enterprise-grade training, fine-tuning, and multi-agent inference at scale.
+
+BlackSync Orchestration Engine
+
+Our router decides:
+
+Who acts
+
+What logic to apply
+
+What data to update
+
+Which system to trigger
+
+This is what transforms AI from “assistant” → autonomous workforce.
+
+Enterprise Data Infrastructure (Alpha Pro Partnership)
+
+BlackSync partners with Alpha Pro Consulting, a leading enterprise data firm specializing in:
+
+AI-driven data management
+
+Cloud infrastructure
+
+Cybersecurity
+
+Data governance & compliance
+
+High-volume ETL & pipelines
+
+Enterprise consulting & staffing
+
+This partnership allows BlackSync to operate inside enterprise environments with proper data controls, compliance, and scalability across MENA, Europe, and Africa.
+
+Together, BlackSync + Alpha Pro deliver:
+
+AI systems + the data backbone they run on
+
+Secure, governed, enterprise-grade deployments
+
+Zero-downtime integrations
+
+Full Ops + full Data + full AI stack
+
+This is the difference between an AI feature and a real enterprise system.
+
+Who We Serve
+
+Broad, powerful verticals — enterprise tone, SMB clarity:
+
+Healthcare (clinics, rehab, patient intake operations)
+
+Real Estate (teams, brokerages, ISA operations)
+
+Automotive Services (repair shops, service networks)
+
+Field Operations & Exterior Services
+
+Education & Academies (inquiries, scheduling, enrollment)
+
+Enterprise Teams needing custom AI + data infrastructure
+
+Any organization running high-volume communication or repetitive workflows — BlackSync replaces 60–90% of that workload.
+
+The Team
+
+A small, elite, engineering-first crew.
+
+Hamza Basal — Founder / Systems Architect
+Product direction, system architecture, enterprise deployment strategy.
+
+Rook — Chief Systems Architect / Head of AI Infrastructure
+NVIDIA stack, model engineering, microservices, multi-agent architecture.
+
+Arya — Software Engineer (Automation & Systems)
+Automation engines, API layers, internal tooling, multi-agent workflows.
+
+Danny — Director of Sales & Partnerships
+Revenue leadership, partnerships, enterprise acquisition.
+
+Dominic — Account Executive
+Outbound, demos, qualification, client onboarding.
+
+Vex — Lead Voice Pipeline Engineer
+Telephony logic, real-time voice routing, agent orchestration.
+
+Luna — UX & Flow Designer
+Conversation architecture, objection handling, decision-tree design.
+
+Global Engineering Network (US/EU/MENA)
+Distributed engineers powering scaled deployments.
+
+Alpha Pro Consulting (Enterprise Data Arm)
+Data governance, cloud, cybersecurity, enterprise architecture.
+
+Philosophy
+
+We don’t automate tasks.
+We rebuild operations.
+
+Systems > staff
+
+Automation > repetition
+
+Data > opinions
+
+Intelligence > scripts
+
+Infrastructure > features
+
+BlackSync creates unfair operational leverage — the kind people notice.
+
+The Future of Ops
+
+The modern business runs on:
+
+AI Intake
+
+AI Scheduling
+
+AI Quoting
+
+AI Follow-Up
+
+AI Collections
+
+AI Data-Cleaning
+
+AI Pipeline Management
+
+All inside the BlackSync Operating System.
+
+A true AI workforce — not a gimmick.
+This is the new backbone of business operations.
+And we’re engineering it now.
