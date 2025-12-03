@@ -282,34 +282,39 @@ export default function About() {
       </section>
 
       {/* Alpha Pro Partnership */}
-      <section className="py-20 bg-[#050509]">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-[#050509] relative overflow-hidden">
+        {/* Red radial glow background */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-900/20 via-transparent to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-500/10 rounded-full blur-[120px]" />
+        
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <WarpBackground 
-              className="bg-gradient-to-br from-red-950/30 to-[#050509]"
-              gridColor="rgba(239, 68, 68, 0.2)"
-              beamDuration={4}
-              beamsPerSide={4}
-            >
+            <div className="relative bg-gradient-to-br from-[#0B0D12] to-[#050509] border border-red-500/20 rounded-3xl p-8 md:p-12 overflow-hidden">
+              {/* Subtle top red line accent */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent" />
+              
               <div className="flex items-center gap-4 mb-8">
-                <div className="p-3 rounded-xl bg-red-500/20 text-red-400">
+                <div className="p-3 rounded-xl bg-red-500/20 text-red-400 border border-red-500/30">
                   <Shield className="h-6 w-6" />
                 </div>
-                <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">
-                  Enterprise Data Infrastructure (Alpha Pro Partnership)
-                </h2>
+                <div>
+                  <h2 className="text-2xl md:text-3xl font-heading font-bold text-white">
+                    Enterprise Data Infrastructure
+                  </h2>
+                  <p className="text-red-400 font-medium">Alpha Pro Partnership</p>
+                </div>
               </div>
               
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-400 mb-8 text-lg">
                 BlackSync partners with <strong className="text-red-400">Alpha Pro Consulting</strong>, a leading enterprise data firm specializing in:
               </p>
               
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 {[
                   "AI-driven data management",
                   "Cloud infrastructure",
@@ -318,15 +323,22 @@ export default function About() {
                   "High-volume ETL & pipelines",
                   "Enterprise consulting & staffing"
                 ].map((item, i) => (
-                  <div key={i} className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-center text-gray-300 text-sm">
+                  <motion.div 
+                    key={i} 
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-red-500/40 rounded-xl p-4 text-center text-gray-300 text-sm transition-all duration-300 hover:bg-red-500/5"
+                  >
                     {item}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
-              <div className="bg-red-500/10 border border-red-500/20 rounded-2xl p-6 mb-6">
+              <div className="bg-gradient-to-r from-red-500/10 to-red-600/5 border-l-4 border-red-500 rounded-r-xl p-6 mb-8">
                 <h4 className="text-white font-semibold mb-4">Together, BlackSync + Alpha Pro deliver:</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {[
                     "AI systems + the data backbone they run on",
                     "Secure, governed, enterprise-grade deployments",
@@ -334,18 +346,18 @@ export default function About() {
                     "Full Ops + full Data + full AI stack"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-gray-300">
-                      <Zap className="h-4 w-4 text-red-400" />
+                      <Zap className="h-4 w-4 text-red-400 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <p className="text-center text-gray-400 italic">
+              <p className="text-center text-gray-400 text-lg">
                 This is the difference between an AI feature and{" "}
                 <span className="text-red-400 font-semibold">a real enterprise system.</span>
               </p>
-            </WarpBackground>
+            </div>
           </motion.div>
         </div>
       </section>
