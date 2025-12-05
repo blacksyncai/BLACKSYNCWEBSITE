@@ -50,24 +50,24 @@ export default function TrustedBy() {
         <div className="pt-8">
           <div className="relative mx-auto flex items-center justify-center lg:max-w-5xl">
             <Carousel
-              opts={{ loop: true }}
-              plugins={[AutoScroll({ playOnInit: true, speed: 1 })]}
+              opts={{ loop: true, dragFree: true }}
+              plugins={[AutoScroll({ playOnInit: true, speed: 2, stopOnInteraction: false })]}
             >
               <CarouselContent className="ml-0">
-                {companies.map((company) => (
+                {[...companies, ...companies].map((company, index) => (
                   <CarouselItem
-                    key={company.id}
-                    className="flex basis-1/2 justify-center pl-0 sm:basis-1/3 md:basis-1/4 lg:basis-1/5"
+                    key={`${company.id}-${index}`}
+                    className="flex basis-auto justify-center pl-0"
                   >
-                    <div className="mx-4 flex shrink-0 items-center justify-center">
+                    <div className="mx-2 flex shrink-0 items-center justify-center">
                       <div 
-                        className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-xl px-6 py-4 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
+                        className="bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
                         data-testid={`company-${company.id}`}
                       >
-                        <p className="text-white/90 font-semibold text-sm whitespace-nowrap">
+                        <p className="text-white/90 font-semibold text-xs sm:text-sm whitespace-nowrap">
                           {company.name}
                         </p>
-                        <span className="text-xs text-primary/60 font-mono tracking-wide">
+                        <span className="text-[10px] sm:text-xs text-primary/60 font-mono tracking-wide">
                           {company.category}
                         </span>
                       </div>
