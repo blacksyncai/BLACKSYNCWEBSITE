@@ -73,12 +73,18 @@ export default function TrustedBy() {
           <div className="relative bg-gradient-to-br from-primary/10 to-cyan-500/10 backdrop-blur-sm border border-primary/20 rounded-xl p-4 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/30">
             <div className="flex items-center justify-center gap-3 text-center">
               <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
+                {[
+                  { initials: "TC", bg: "from-blue-500 to-blue-600" },
+                  { initials: "JM", bg: "from-purple-500 to-purple-600" },
+                  { initials: "AS", bg: "from-cyan-500 to-cyan-600" },
+                  { initials: "RK", bg: "from-green-500 to-green-600" },
+                  { initials: "+12", bg: "from-primary to-cyan-500" },
+                ].map((item, i) => (
                   <div
                     key={i}
-                    className="w-6 h-6 rounded-full bg-gradient-to-br from-primary/30 to-cyan-500/30 border-2 border-[#0B0D12] flex items-center justify-center"
+                    className={`w-8 h-8 rounded-full bg-gradient-to-br ${item.bg} border-2 border-[#0B0D12] flex items-center justify-center shadow-lg`}
                   >
-                    <span className="text-xs text-white/60">+</span>
+                    <span className="text-[10px] font-bold text-white">{item.initials}</span>
                   </div>
                 ))}
               </div>
