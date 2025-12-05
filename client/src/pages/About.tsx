@@ -17,6 +17,7 @@ export default function About() {
     { name: "Dominic", role: "Account Executive", desc: "Outbound, demos, qualification, client onboarding." },
     { name: "Vex", role: "Lead Voice Pipeline Engineer", desc: "Telephony logic, real-time voice routing, agent orchestration." },
     { name: "Luna", role: "UX & Flow Designer", desc: "Conversation architecture, objection handling, decision-tree design." },
+    { name: "Giovanna", role: "Legal Operations Coordinator", desc: "Legal compliance, contract management, operational documentation." },
   ];
 
   const industries = [
