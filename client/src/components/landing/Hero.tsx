@@ -53,7 +53,7 @@ export default function Hero() {
               </h1>
               
               <p className="max-w-[600px] text-lg text-muted-foreground md:text-xl leading-relaxed drop-shadow-lg">
-                BlackSync AI isn’t just answering phones; it’s plugged into your calendar, your CRM, your point of sale, your entire workflow.
+                BlackSync AI answers calls instantly and books jobs consistently — preventing every missed opportunity.
               </p>
             </div>
 
