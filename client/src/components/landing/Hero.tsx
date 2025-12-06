@@ -46,9 +46,9 @@ export default function Hero() {
               </motion.div>
               
               <h1 className="text-4xl font-display font-bold tracking-tight text-white sm:text-6xl xl:text-7xl drop-shadow-2xl">
-                The Brain That <br />
+                Always in Sync <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                  Never Logs Out
+                  Never Offline
                 </span>
               </h1>
               
