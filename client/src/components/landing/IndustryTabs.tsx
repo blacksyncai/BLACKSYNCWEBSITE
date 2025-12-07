@@ -37,9 +37,9 @@ const industries = [
     icon: Wrench,
     color: "text-orange-400",
     points: [
-      "Answers missed calls from Google Ads and referrals.",
-      "Sends quotes via SMS or email.",
-      "Follows up on open estimates until they say yes or no."
+      "Answers missed calls from Google Ads and referrals",
+      "Sends quotes by SMS or email",
+      "Follows up on open estimates until a decision is made"
     ]
   },
   {
