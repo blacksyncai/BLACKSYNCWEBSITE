@@ -5,7 +5,6 @@ import FeatureGrid from "@/components/landing/FeatureGrid";
 import Integrations from "@/components/landing/Integrations";
 import IndustryTabs from "@/components/landing/IndustryTabs";
 import Timeline from "@/components/landing/Timeline";
-import ComparisonTable from "@/components/landing/ComparisonTable";
 import Pricing from "@/components/landing/Pricing";
 import Testimonials from "@/components/landing/Testimonials";
 import ContactForm from "@/components/landing/ContactForm";
@@ -21,7 +20,6 @@ export default function Home() {
       <Integrations />
       <IndustryTabs />
       <Timeline />
-      <ComparisonTable />
       <div className="py-24 bg-[#050509]">
         <div className="container mx-auto px-4">
            <div className="grid md:grid-cols-2 gap-12 items-center bg-gradient-to-br from-gray-900 to-black border border-white/10 rounded-3xl p-8 md:p-12">
