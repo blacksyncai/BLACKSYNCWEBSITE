@@ -60,7 +60,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 h-12 rounded-full shadow-[0_0_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.6)] transition-all w-full sm:w-auto">
-                  Book a Strategy Call
+                  See Our AI Agents
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </a>
@@ -68,7 +68,7 @@ export default function Hero() {
                 <Button size="lg" className="relative h-12 px-6 overflow-hidden bg-zinc-900 transition-all duration-200 group rounded-full w-full sm:w-auto">
                   <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-40 group-hover:opacity-80 blur transition-opacity duration-500" />
                   <div className="relative flex items-center justify-center gap-2">
-                    <span className="text-white font-semibold">Inside BlackSync AI</span>
+                    <span className="text-white font-semibold">About BlackSync AI</span>
                     <ArrowUpRight className="w-4 h-4 text-white/90" />
                   </div>
                 </Button>
