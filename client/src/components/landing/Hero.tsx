@@ -42,7 +42,7 @@ export default function Hero() {
                 className="inline-flex items-center rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-sm text-primary backdrop-blur-sm"
               >
                 <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-                AI Employees for Real Businesses
+                AI Employees — Full Time 24/7 Never Offline
               </motion.div>
               
               <h1 className="text-4xl font-display font-bold tracking-tight text-white sm:text-6xl xl:text-7xl drop-shadow-2xl">
