@@ -101,8 +101,8 @@ export default function Integrations() {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#050509] to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#050509] to-transparent z-10 pointer-events-none" />
         
-        <MarqueeRow items={row1} direction="left" speed={30} />
-        <MarqueeRow items={row2} direction="right" speed={35} />
+        <MarqueeRow items={row1} direction="left" speed={15} />
+        <MarqueeRow items={row2} direction="right" speed={18} />
       </div>
 
       <div className="container mx-auto px-4 text-center mt-10">
