@@ -83,9 +83,9 @@ const industries = [
     points: [
       "Automates supplier and vendor communications",
       "Manages order inquiries and status updates",
-      "Streamlines B2B lead qualification and follow-ups",
-      "Trusted by Al Suhami Holding Company in Saudi Arabia"
-    ]
+      "Streamlines B2B lead qualification and follow-ups"
+    ],
+    description: "Trusted by Al Suhami Holding Company in Saudi Arabia"
   }
 ];
 
@@ -155,6 +155,17 @@ export default function IndustryTabs() {
                       </motion.li>
                     ))}
                   </ul>
+
+                  {activeTab.description && (
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: activeTab.points.length * 0.1 }}
+                      className="mt-6 text-lg text-gray-400 italic"
+                    >
+                      {activeTab.description}
+                    </motion.p>
+                  )}
                 </div>
 
                 {/* Industry Specific Link */}
