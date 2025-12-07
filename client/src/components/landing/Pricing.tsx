@@ -4,24 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 const plans = [
   {
-    name: "🚀 Starter",
+    name: "🚀 LaunchPad",
     desc: "For small teams starting with AI calling.",
-    credits: "100 included credits",
     features: ["Inbound AI call handling", "CRM note logging", "SMS follow-up summaries", "Standard business hours support"],
     cta: "Talk to us"
   },
   {
-    name: "📈 Growth",
+    name: "📈 Core",
     desc: "For teams running AI calling every day.",
-    credits: "1,000 included credits",
     highlight: true,
     features: ["Inbound & outbound AI agents", "Full CRM 2-way sync", "SMS & WhatsApp automation", "Priority support & routing"],
     cta: "Book Strategy Call"
   },
   {
-    name: "🧠 Custom",
+    name: "🧠 Fusion",
     desc: "For operators with high call volume.",
-    credits: "3,000 included credits",
     features: ["Multi-location routing", "Custom CRM integrations", "Dedicated engineer", "SLA options & white-label"],
     cta: "Contact Sales"
   }
@@ -54,7 +51,6 @@ export default function Pricing() {
               <CardHeader>
                 <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                 <CardDescription className="text-muted-foreground">{plan.desc}</CardDescription>
-                <div className="mt-3 text-primary font-semibold text-lg">{plan.credits}</div>
               </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-3">
