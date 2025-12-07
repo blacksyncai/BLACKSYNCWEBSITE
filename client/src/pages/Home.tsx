@@ -6,7 +6,6 @@ import Integrations from "@/components/landing/Integrations";
 import IndustryTabs from "@/components/landing/IndustryTabs";
 import Timeline from "@/components/landing/Timeline";
 import Pricing from "@/components/landing/Pricing";
-import Testimonials from "@/components/landing/Testimonials";
 import ContactForm from "@/components/landing/ContactForm";
 import Footer from "@/components/landing/Footer";
 
@@ -20,7 +19,6 @@ export default function Home() {
       <Integrations />
       <IndustryTabs />
       <Timeline />
-      <Testimonials />
       <Pricing />
       <div className="py-24 bg-[#050509]">
         <div className="container mx-auto px-4">
