@@ -99,7 +99,7 @@ export default function IndustryTabs() {
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Industry-Ready AI Systems
           </h2>
-          <p className="text-gray-400 text-lg">Flows built for your business — see proven automations for your industry.</p>
+          <p className="text-gray-400 text-lg">Flows built for your business — see proven automations from your industry</p>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8">
