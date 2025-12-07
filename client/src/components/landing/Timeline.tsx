@@ -29,10 +29,10 @@ export default function Timeline() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            From idea to live AI employee in days, not months.
+            From Blueprint to Automation
           </h2>
           <p className="text-muted-foreground">
-            100% white-glove implementation. No “DIY AI platform” headaches.
+            A proven process for building, launching, and scaling your AI
           </p>
         </div>
 
