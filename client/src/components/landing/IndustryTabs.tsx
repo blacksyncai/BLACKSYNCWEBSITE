@@ -26,9 +26,9 @@ const industries = [
     link: "https://blacksync.clinic",
     linkText: "Check Out BlackSync for Clinics",
     points: [
-      "Answers overflow calls and after-hours calls.",
-      "Books, reschedules, and confirms appointments.",
-      "Sends reminders and recall campaigns for inactive patients."
+      "Answers overflow and after-hours calls to prevent missed patients",
+      "Manages booking, rescheduling, and confirmations",
+      "Sends recall reminders and follow-ups to re-engage inactive patients"
     ]
   },
   {
