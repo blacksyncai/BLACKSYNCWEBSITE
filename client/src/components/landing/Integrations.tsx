@@ -46,39 +46,67 @@ const crmStack: Integration[] = [
   { name: "Intercom", icon: MessageSquareMore },
 ];
 
+const row1 = crmStack.slice(0, 18);
+const row2 = crmStack.slice(18);
+
+function IntegrationBadge({ integration }: { integration: Integration }) {
+  const Icon = integration.icon;
+  return (
+    <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-white/20 transition-colors whitespace-nowrap">
+      <Icon className="h-4 w-4 text-white/60" />
+      <span className="text-sm font-medium text-white/80">{integration.name}</span>
+    </div>
+  );
+}
+
+function MarqueeRow({ items, direction = "left", speed = 25 }: { items: Integration[], direction?: "left" | "right", speed?: number }) {
+  const duplicatedItems = [...items, ...items, ...items];
+  
+  return (
+    <div className="relative overflow-hidden py-2">
+      <motion.div
+        className="flex gap-4"
+        animate={{
+          x: direction === "left" ? ["0%", "-33.33%"] : ["-33.33%", "0%"]
+        }}
+        transition={{
+          x: {
+            duration: speed,
+            repeat: Infinity,
+            ease: "linear",
+          },
+        }}
+      >
+        {duplicatedItems.map((integration, i) => (
+          <IntegrationBadge key={`${integration.name}-${i}`} integration={integration} />
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
 export default function Integrations() {
   return (
-    <section className="py-20 border-y border-white/5 bg-[#050509]">
-      <div className="container mx-auto px-4 text-center">
-        <div className="mb-10">
-          <h3 className="text-2xl font-display font-semibold text-white mb-2">
-            Plug Into Your Stack
-          </h3>
-          <p className="text-muted-foreground">
-            Plug BlackSync into the tools you already use.
-          </p>
-        </div>
+    <section className="py-20 border-y border-white/5 bg-[#050509] overflow-hidden">
+      <div className="container mx-auto px-4 text-center mb-10">
+        <h3 className="text-2xl font-display font-semibold text-white mb-2">
+          Plug Into Your Stack
+        </h3>
+        <p className="text-muted-foreground">
+          Plug BlackSync into the tools you already use.
+        </p>
+      </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {crmStack.map((integration, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.02 }}
-              className="group flex flex-col items-center gap-2 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-primary/40 hover:bg-white/10 transition-all duration-300"
-              data-testid={`integration-${integration.name.toLowerCase().replace(/\s+/g, '-')}`}
-            >
-              <integration.icon className="h-6 w-6 text-primary/70 group-hover:text-primary transition-colors" />
-              <span className="text-sm font-medium text-white/70 group-hover:text-white transition-colors text-center">
-                {integration.name}
-              </span>
-            </motion.div>
-          ))}
-        </div>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#050509] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#050509] to-transparent z-10 pointer-events-none" />
+        
+        <MarqueeRow items={row1} direction="left" speed={30} />
+        <MarqueeRow items={row2} direction="right" speed={35} />
+      </div>
 
-        <p className="mt-10 text-sm text-primary/80 font-medium">
+      <div className="container mx-auto px-4 text-center mt-10">
+        <p className="text-sm text-primary/80 font-medium">
           If it has an API, we can sync it.
         </p>
       </div>
