@@ -9,16 +9,18 @@ import { Link } from "wouter";
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 bg-[#050509]">
-      <WavyBackground
-        className="absolute inset-0"
-        containerClassName="absolute inset-0"
-        colors={["#2563eb", "#3b82f6", "#6366f1", "#8b5cf6", "#06b6d4"]}
-        waveWidth={50}
-        backgroundFill="#050509"
-        blur={10}
-        speed="slow"
-        waveOpacity={0.3}
-      />
+      <div className="absolute inset-0 pointer-events-none">
+        <WavyBackground
+          className="absolute inset-0"
+          containerClassName="absolute inset-0"
+          colors={["#2563eb", "#3b82f6", "#6366f1", "#8b5cf6", "#06b6d4"]}
+          waveWidth={50}
+          backgroundFill="#050509"
+          blur={10}
+          speed="slow"
+          waveOpacity={0.3}
+        />
+      </div>
       
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20 z-10"
@@ -26,7 +28,7 @@ export default function Hero() {
       />
       
       {/* 3D Scene Background - Full Coverage */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-20">
         <SplineScene 
           scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
           className="w-full h-full scale-125 md:scale-100 lg:scale-110 translate-x-1/4 md:translate-x-1/3 lg:translate-x-[20%]"
@@ -37,7 +39,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#050509] via-[#050509]/80 to-transparent z-0 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#050509]/20 to-[#050509] z-0 pointer-events-none" />
       
-      <div className="container relative z-10 mx-auto px-4 md:px-6 h-full flex items-center">
+      <div className="container relative z-30 mx-auto px-4 md:px-6 h-full flex items-center pointer-events-none">
         <div className="max-w-2xl">
           {/* Left Column: Copy */}
           <motion.div 
@@ -69,7 +71,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pointer-events-auto">
               <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 h-12 rounded-full shadow-[0_0_20px_-5px_rgba(37,99,235,0.5)] hover:shadow-[0_0_30px_-5px_rgba(37,99,235,0.6)] transition-all w-full sm:w-auto">
                   See Our AI Agents
