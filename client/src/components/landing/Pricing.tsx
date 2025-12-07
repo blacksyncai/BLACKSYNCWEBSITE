@@ -30,8 +30,11 @@ export default function Pricing() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            Simple: we build, launch, and run your AI employees.
+            Pick a plan and pay only for what you use
           </h2>
+          <p className="text-muted-foreground text-lg">
+            Start small and add more credits anytime
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
