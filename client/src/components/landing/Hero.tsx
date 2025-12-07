@@ -3,11 +3,23 @@ import { Phone, Database, Mail, Calendar, ArrowRight, ArrowUpRight } from "lucid
 import { Button } from "@/components/ui/button";
 import { SplineScene } from "@/components/ui/spline";
 import { Spotlight } from "@/components/ui/spotlight";
+import { WavyBackground } from "@/components/ui/wavy-background";
 import { Link } from "wouter";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden pt-20 pb-16 md:pt-32 bg-[#050509]">
+      <WavyBackground
+        className="absolute inset-0"
+        containerClassName="absolute inset-0"
+        colors={["#2563eb", "#3b82f6", "#6366f1", "#8b5cf6", "#06b6d4"]}
+        waveWidth={50}
+        backgroundFill="#050509"
+        blur={10}
+        speed="slow"
+        waveOpacity={0.3}
+      />
+      
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20 z-10"
         fill="white"
