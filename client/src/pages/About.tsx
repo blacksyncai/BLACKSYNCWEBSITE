@@ -58,6 +58,15 @@ export default function About() {
               </div>
             </GridBackground>
           </motion.div>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.5 }}
+            className="text-center text-gray-400 mt-8 text-sm"
+          >
+            scroll it's worth it 😉
+          </motion.p>
         </div>
       </section>
 
