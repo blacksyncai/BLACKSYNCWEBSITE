@@ -59,14 +59,30 @@ export default function About() {
             </GridBackground>
           </motion.div>
           
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="text-center text-gray-400 mt-8 text-sm"
+            className="flex flex-col items-center mt-12 gap-3"
           >
-            scroll it's worth it 😉
-          </motion.p>
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="flex flex-col items-center"
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-purple-500 font-medium text-lg tracking-wide">
+                scroll it's worth it 😉
+              </span>
+              <svg 
+                className="w-6 h-6 text-primary mt-2 opacity-70" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
