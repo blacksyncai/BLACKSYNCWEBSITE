@@ -103,7 +103,7 @@ export default function Hero() {
             </div>
             
             <p className="text-xs text-muted-foreground/60 pt-4 border-t border-white/5">
-              Trusted by teams in real estate, healthcare, home services, automotive, and education.
+              Trusted across real estate, education, healthcare, home services, and automotive
             </p>
           </motion.div>
         </div>
