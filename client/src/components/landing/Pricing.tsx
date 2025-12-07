@@ -4,22 +4,25 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 const plans = [
   {
-    name: "Starter",
-    desc: "For small teams ready to stop missing calls.",
-    features: ["Voice Agent for Inbound Calls", "Basic CRM Logging", "Email Summaries", "Standard Business Hours Support"],
+    name: "🌶️ Starter",
+    desc: "For small teams starting with AI calling.",
+    credits: "100 included credits",
+    features: ["Inbound AI call handling", "CRM note logging", "SMS follow-up summaries", "Standard business hours support"],
     cta: "Talk to us"
   },
   {
-    name: "Growth",
-    desc: "For teams that want AI handling serious volume.",
+    name: "💠 Growth",
+    desc: "For teams running AI calling every day.",
+    credits: "1,000 included credits",
     highlight: true,
-    features: ["Inbound & Outbound Agents", "Full CRM 2-Way Sync", "SMS & WhatsApp Capabilities", "Priority Support", "Custom Workflows"],
+    features: ["Inbound & outbound AI agents", "Full CRM 2-way sync", "SMS & WhatsApp automation", "Priority support & routing"],
     cta: "Book Strategy Call"
   },
   {
-    name: "Custom",
-    desc: "For operators with complex workflows.",
-    features: ["Multi-Location Routing", "Custom API Integrations", "Dedicated Engineer", "SLA Guarantees", "White-Label Options"],
+    name: "🧠 Custom",
+    desc: "For operators with high call volume.",
+    credits: "3,000 included credits",
+    features: ["Multi-location routing", "Custom CRM integrations", "Dedicated engineer", "SLA options & white-label"],
     cta: "Contact Sales"
   }
 ];
@@ -51,6 +54,7 @@ export default function Pricing() {
               <CardHeader>
                 <CardTitle className="text-2xl text-white">{plan.name}</CardTitle>
                 <CardDescription className="text-muted-foreground">{plan.desc}</CardDescription>
+                <div className="mt-3 text-primary font-semibold text-lg">{plan.credits}</div>
               </CardHeader>
               <CardContent className="flex-1">
                 <ul className="space-y-3">
