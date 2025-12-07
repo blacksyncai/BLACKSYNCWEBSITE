@@ -70,9 +70,9 @@ const industries = [
     icon: Briefcase,
     color: "text-purple-400",
     points: [
-      "White-label AI solutions for your clients.",
-      "Automates client reporting and updates.",
-      "Scales lead qualification for high-volume campaigns."
+      "White-labels AI systems for your clients",
+      "Automates client reporting and status updates",
+      "Scales lead qualification for high-volume campaigns"
     ]
   },
   {
