@@ -4,14 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 const plans = [
   {
-    name: "🌶️ Starter",
+    name: "🚀 Starter",
     desc: "For small teams starting with AI calling.",
     credits: "100 included credits",
     features: ["Inbound AI call handling", "CRM note logging", "SMS follow-up summaries", "Standard business hours support"],
     cta: "Talk to us"
   },
   {
-    name: "💠 Growth",
+    name: "📈 Growth",
     desc: "For teams running AI calling every day.",
     credits: "1,000 included credits",
     highlight: true,
