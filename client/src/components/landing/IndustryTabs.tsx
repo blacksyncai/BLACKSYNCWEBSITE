@@ -32,6 +32,17 @@ const industries = [
     ]
   },
   {
+    id: "education",
+    label: "Education",
+    icon: GraduationCap,
+    color: "text-yellow-400",
+    points: [
+      "Qualifies prospective student inquiries.",
+      "Automates enrollment follow-ups and document collection.",
+      "Answers common FAQ for parents and students."
+    ]
+  },
+  {
     id: "home-services",
     label: "Home Services",
     icon: Wrench,
@@ -51,17 +62,6 @@ const industries = [
       "Schedules service appointments and test drives.",
       "Follows up on service recommendations.",
       "Handles parts inquiries and status updates."
-    ]
-  },
-  {
-    id: "education",
-    label: "Education",
-    icon: GraduationCap,
-    color: "text-yellow-400",
-    points: [
-      "Qualifies prospective student inquiries.",
-      "Automates enrollment follow-ups and document collection.",
-      "Answers common FAQ for parents and students."
     ]
   },
   {
