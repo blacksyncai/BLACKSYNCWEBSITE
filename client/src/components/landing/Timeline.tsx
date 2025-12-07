@@ -29,8 +29,10 @@ const steps = [
 
 export default function Timeline() {
   return (
-    <section className="py-24 bg-[#050509] border-t border-white/5">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative overflow-hidden border-t border-white/5" style={{ background: 'linear-gradient(180deg, #020204 0%, #0a0c14 50%, #050509 100%)' }}>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.08)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(99,102,241,0.05)_0%,transparent_40%)]" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             From Blueprint to Automation
