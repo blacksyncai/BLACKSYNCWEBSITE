@@ -90,7 +90,7 @@ export default function TrustedBy() {
               </div>
               <p className="text-white/70 font-semibold text-sm">
                 And many more businesses{" "}
-                <span className="text-primary">automating with AI</span>
+                <span className="text-primary">automating with BlackSync AI</span>
               </p>
             </div>
           </div>
