@@ -90,10 +90,10 @@ export default function ContactForm() {
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-heading font-bold text-white mb-4"
             >
-              Let's build your AI workforce.
+              Let's build your AI workforce
             </motion.h2>
             <p className="text-muted-foreground text-lg">
-              Tell us about your business and what you're looking to automate.
+              Tell us about your business and your automation ideas
             </p>
           </div>
 
