@@ -44,7 +44,7 @@ export default function FeatureGrid() {
             viewport={{ once: true }}
             className="text-3xl font-heading font-bold tracking-tight text-white sm:text-4xl mb-4"
           >
-            Every call answered, every lead followed up, every appointment scheduled — fully automated
+            Every call answered, every lead followed up, every appointment scheduled — fully automated across all your existing systems
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
