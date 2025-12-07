@@ -13,9 +13,9 @@ const industries = [
     link: "https://blacksyncrealestate.com",
     linkText: "Check Out BlackSync for Real Estate",
     points: [
-      "Calls your CRM ponds (buyer, seller, FSBO) to qualify and re-activate leads.",
-      "Handles missed calls from signs, portals, and website.",
-      "Sends call summaries and hot lead alerts directly to agents."
+      "Reactivates CRM ponds (buyer, seller, FSBO) to revive old leads",
+      "Books appointments from missed calls on signs, portals, and website",
+      "Delivers real-time lead alerts and call summaries to agents"
     ]
   },
   {
