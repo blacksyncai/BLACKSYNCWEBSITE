@@ -1,0 +1,140 @@
+"use client"
+
+import { FormEvent, useRef, useState } from "react"
+import {
+  Cloud, Database, LineChart, Mail, PhoneCall, Calendar, Cable, Settings, Wrench, Gauge, SprayCan, Hammer, Home, Construction, Book, MessageSquare, MessageCircle, MessageSquareMore, Wallet
+} from "lucide-react"
+
+type Status = "idle" | "loading" | "success"
+
+const crmStack = [
+  { name: "Salesforce", icon: Cloud },
+  { name: "HubSpot", icon: Database },
+  { name: "Zoho CRM", icon: LineChart },
+  { name: "GoHighLevel (GHL)", icon: LineChart },
+  { name: "Follow Up Boss", icon: PhoneCall },
+  { name: "Sierra Interactive", icon: PhoneCall },
+  { name: "KVCore", icon: Database },
+  { name: "Chime", icon: Database },
+  { name: "Mitchell 1", icon: Settings },
+  { name: "ShopMonkey", icon: Wrench },
+  { name: "Identifix", icon: Wrench },
+  { name: "Tekmetric", icon: Gauge },
+  { name: "AutoLeap", icon: Wrench },
+  { name: "ServiceMonster", icon: SprayCan },
+  { name: "Jobber", icon: Hammer },
+  { name: "Housecall Pro", icon: Home },
+  { name: "ServiceTitan", icon: Construction },
+  { name: "Twilio", icon: Cable },
+  { name: "Telnyx", icon: Cable },
+  { name: "Maqsam", icon: PhoneCall },
+  { name: "CallRail", icon: PhoneCall },
+  { name: "JustCall", icon: PhoneCall },
+  { name: "RingCentral", icon: PhoneCall },
+  { name: "Aircall", icon: PhoneCall },
+  { name: "Gmail", icon: Mail },
+  { name: "Outlook", icon: Mail },
+  { name: "Microsoft 365", icon: Mail },
+  { name: "Google Calendar", icon: Calendar },
+  { name: "Notion", icon: Book },
+  { name: "Slack", icon: MessageSquare },
+  { name: "Stripe", icon: LineChart },
+  { name: "QuickBooks", icon: Wallet },
+  { name: "FreshBooks", icon: Wallet },
+  { name: "Zendesk", icon: MessageCircle },
+  { name: "Intercom", icon: MessageSquareMore },
+]
+
+export const WaitlistHero = () => {
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<Status>("idle")
+  const canvasRef = useRef<HTMLCanvasElement | null>(null)
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!email) return
+
+    setStatus("loading")
+
+    setTimeout(() => {
+      setStatus("success")
+      setEmail("")
+      fireConfetti()
+      setTimeout(() => setStatus("idle"), 2200) // reset to form after celebration
+    }, 1500)
+  }
+
+  const fireConfetti = () => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+    if (!ctx) return
+
+    const particles: Particle[] = []
+    const colors = ["#0079da", "#10b981", "#fbbf24", "#f472b6", "#ffffff"]
+
+    canvas.width = canvas.offsetWidth
+    canvas.height = canvas.offsetHeight
+
+    const createParticle = (): Particle => ({
+      x: canvas.width / 2,
+      y: canvas.height / 2,
+      vx: (Math.random() - 0.5) * 12,
+      vy: (Math.random() - 2) * 10,
+      life: 100,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      size: Math.random() * 4 + 2,
+    })
+
+    for (let i = 0; i < 50; i++) {
+      particles.push(createParticle())
+    }
+
+    const animate = () => {
+      if (!ctx || !canvas) return
+
+      if (particles.length === 0) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        return
+      }
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i]
+        p.x += p.vx
+        p.y += p.vy
+        p.vy += 0.5
+        p.life -= 2
+
+        ctx.fillStyle = p.color
+        ctx.globalAlpha = Math.max(0, p.life / 100)
+        ctx.beginPath()
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
+        ctx.fill()
+
+        if (p.life <= 0) {
+          particles.splice(i, 1)
+          i--
+        }
+      }
+
+      requestAnimationFrame(animate)
+    }
+
+    animate()
+  }
+
+  const colors = {
+    textMain: "#ffffff",
+    textSecondary: "#94a3b8",
+    bluePrimary: "#0079da",
+    success: "#10b981",
+    inputBg: "#18181b",
+    baseBg: "#020617",
+    inputShadow: "rgba(148, 163, 184, 0.4)",
+  }
+
+  return (
+    <div className="flex min-h-screen
