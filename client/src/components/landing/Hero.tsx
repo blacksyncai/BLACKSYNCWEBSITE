@@ -80,25 +80,25 @@ export default function Hero() {
                 <div className="p-1.5 rounded-full bg-primary/10 text-primary">
                   <Phone className="h-3.5 w-3.5" />
                 </div>
-                <span>24/7 AI agents for calls & texts</span>
+                <span>24/7 AI that answers, qualifies, and books</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="p-1.5 rounded-full bg-secondary/10 text-secondary">
                   <Database className="h-3.5 w-3.5" />
                 </div>
-                <span>Deep CRM & workflow automations</span>
+                <span>Integrates instantly with your CRM</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="p-1.5 rounded-full bg-accent/10 text-accent">
                   <Mail className="h-3.5 w-3.5" />
                 </div>
-                <span>Never miss a lead or quote request</span>
+                <span>Get notified with each call summary</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="p-1.5 rounded-full bg-purple-500/10 text-purple-400">
                   <Calendar className="h-3.5 w-3.5" />
                 </div>
-                <span>Custom plugins for your stack</span>
+                <span>Appointments go straight to your calendar</span>
               </div>
             </div>
             
