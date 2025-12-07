@@ -59,9 +59,9 @@ const industries = [
     icon: Car,
     color: "text-red-400",
     points: [
-      "Schedules service appointments and test drives.",
-      "Follows up on service recommendations.",
-      "Handles parts inquiries and status updates."
+      "Books service appointments and test drives",
+      "Follows up on service recommendations",
+      "Manages parts inquiries and status updates"
     ]
   },
   {
