@@ -3,7 +3,6 @@ import Hero from "@/components/landing/Hero";
 import TrustedBy from "@/components/landing/TrustedBy";
 import FeatureGrid from "@/components/landing/FeatureGrid";
 import Integrations from "@/components/landing/Integrations";
-import BlueprintSchematic from "@/components/landing/BlueprintSchematic";
 import IndustryTabs from "@/components/landing/IndustryTabs";
 import Timeline from "@/components/landing/Timeline";
 import ComparisonTable from "@/components/landing/ComparisonTable";
@@ -20,7 +19,6 @@ export default function Home() {
       <TrustedBy />
       <FeatureGrid />
       <Integrations />
-      <BlueprintSchematic />
       <IndustryTabs />
       <Timeline />
       <ComparisonTable />
