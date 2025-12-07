@@ -44,7 +44,7 @@ export default function FeatureGrid() {
             viewport={{ once: true }}
             className="text-3xl font-heading font-bold tracking-tight text-white sm:text-4xl mb-4"
           >
-            Not a chatbot. A full-stack AI employee.
+            Every call answered, every lead followed up, every appointment scheduled — fully automated
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function FeatureGrid() {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground text-lg"
           >
-            BlackSync AI builds AI employees that plug into your existing tools. They answer calls, send texts, update your CRM, send emails, follow up on quotes, and keep your pipeline moving while your team sleeps.
+            BlackSync deploys AI agents that handle inbound and missed calls, work every lead with SMS and email sequences, update your CRM, trigger automations, and schedule appointments — across all your existing tools.
           </motion.p>
         </div>
 
