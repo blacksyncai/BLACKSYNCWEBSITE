@@ -1,33 +1,9 @@
-import { Button } from "@/components/ui/button";
 import { Twitter, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-[#050509] border-t border-white/10 pt-20 pb-10">
       <div className="container mx-auto px-4">
-        {/* CTA Section */}
-        <div className="bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl p-8 md:p-16 text-center mb-20 border border-white/10 relative overflow-hidden">
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-0" />
-          <div className="relative z-10 max-w-2xl mx-auto space-y-8">
-            <h2 className="text-3xl md:text-5xl font-heading font-bold text-white">
-              Ready to hire your first AI employee?
-            </h2>
-            <p className="text-lg text-gray-300">
-              Tell us about your business. We’ll show you exactly what BlackSync AI would handle for you in the first 30 days.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://cal.com/blacksync.ai/discovery-call1" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 h-12 text-lg w-full sm:w-auto">
-                  Book a Strategy Call
-                </Button>
-              </a>
-              <Button variant="outline" size="lg" className="border-white/10 bg-white/5 text-white hover:bg-white/10 h-12 rounded-full text-lg">
-                Watch Product Demo
-              </Button>
-            </div>
-          </div>
-        </div>
-
         {/* Footer Links */}
         <div className="grid md:grid-cols-4 gap-12 mb-16 text-center md:text-left">
           <div className="col-span-1 md:col-span-2">
