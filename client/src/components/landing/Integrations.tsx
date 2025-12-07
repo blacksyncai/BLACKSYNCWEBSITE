@@ -90,10 +90,10 @@ export default function Integrations() {
     <section className="py-20 border-y border-white/5 bg-[#050509] overflow-hidden">
       <div className="container mx-auto px-4 text-center mb-10">
         <h3 className="text-2xl font-display font-semibold text-white mb-2">
-          Plug Into Your Stack
+          Works With What You Already Use
         </h3>
         <p className="text-muted-foreground">
-          Plug BlackSync into the tools you already use.
+          Connect BlackSync to your CRM, phone system, inbox, and calendar.
         </p>
       </div>
 
@@ -107,7 +107,7 @@ export default function Integrations() {
 
       <div className="container mx-auto px-4 text-center mt-10">
         <p className="text-sm text-primary/80 font-medium">
-          If it has an API, we can sync it.
+          If it has an API, we integrate it.
         </p>
       </div>
     </section>
