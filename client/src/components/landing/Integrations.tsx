@@ -93,7 +93,7 @@ export default function Integrations() {
           Works With What You Already Use
         </h3>
         <p className="text-muted-foreground">
-          Connect BlackSync to your CRM, phone system, inbox, and calendar.
+          Connect BlackSync to your CRM, phone system, inbox, and calendar
         </p>
       </div>
 
