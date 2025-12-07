@@ -81,10 +81,10 @@ const industries = [
     icon: Factory,
     color: "text-cyan-400",
     points: [
-      "Automates supplier and vendor communications.",
-      "Handles order inquiries and status updates.",
-      "Streamlines B2B lead qualification and follow-ups.",
-      "Proudly supporting Al Suhami Holding Company in Saudi Arabia."
+      "Automates supplier and vendor communications",
+      "Manages order inquiries and status updates",
+      "Streamlines B2B lead qualification and follow-ups",
+      "Trusted by Al Suhami Holding Company in Saudi Arabia"
     ]
   }
 ];
