@@ -37,9 +37,9 @@ const industries = [
     icon: GraduationCap,
     color: "text-yellow-400",
     points: [
-      "Qualifies prospective student inquiries.",
-      "Automates enrollment follow-ups and document collection.",
-      "Answers common FAQ for parents and students."
+      "Qualifies prospective student inquiries",
+      "Automates enrollment follow-ups and document collection",
+      "Responds to common questions from parents and students"
     ]
   },
   {
