@@ -75,7 +75,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-24 bg-[#050509] relative overflow-hidden">
+    <section id="contact" className="py-24 bg-[#050509] relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#080a10] to-[#050509] z-0" />
       <div className="absolute -right-20 top-20 w-96 h-96 bg-primary/5 rounded-full blur-[100px] pointer-events-none" />
