@@ -4,29 +4,29 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 
 const features = [
   {
-    title: "AI Voice & SMS Agents",
-    description: "Handles inbound calls, missed calls, and outbound follow-up. Logs everything back into your CRM.",
+    title: "AI Phone Agents",
+    description: "Answer every call, qualify every lead, and book appointments automatically — all synced to your CRM.",
     Icon: Phone,
     color: "text-blue-400",
     gradient: "from-blue-500/20 to-blue-600/5"
   },
   {
-    title: "CRM & Workflow Automations",
-    description: "Automatically creates tasks, updates lead statuses, adds notes, sends follow-up sequences, and keeps everything synced.",
+    title: "Automated CRM Workflows",
+    description: "Auto-updates lead statuses, creates tasks, adds notes, triggers follow-up sequences, and keeps everything organized.",
     Icon: GitBranch,
     color: "text-cyan-400",
     gradient: "from-cyan-500/20 to-cyan-600/5"
   },
   {
-    title: "Industry-Specific Playbooks",
-    description: "Pre-built flows for real estate, clinics, home services, automotive, schools, and agencies.",
+    title: "Industry Playbooks",
+    description: "Ready-to-deploy flows built for real estate, clinics, home services, automotive, schools, and more.",
     Icon: BookOpen,
     color: "text-yellow-400",
     gradient: "from-yellow-500/20 to-yellow-600/5"
   },
   {
-    title: "Custom Plugins & Integrations",
-    description: "Deep integrations with CRMs, help desks, phone systems, and internal tools. Built like a real engineering partner.",
+    title: "Custom Integrations",
+    description: "Deep integrations with CRMs, help desks, phone systems, and internal tools — no new tools required.",
     Icon: Puzzle,
     color: "text-purple-400",
     gradient: "from-purple-500/20 to-purple-600/5"
