@@ -1,0 +1,47 @@
+Redesign the entire About BlackSync section to make it visually striking and unique. Change the layout dramatically while keeping the same text content.
+
+New layout direction:
+- The headline and paragraph should become the central “core” node visually.
+- Arrange the SIX automation modules around the text in a circular / radial flow layout.
+- The modules are: Intake, Scheduling, Quoting, Payments, Communication, CRM.
+- Connect these modules to the central text node using curved animated neon lines.
+- The curved lines should animate slowly, showing a pulsing signal that moves from each module into the center node.
+- The animation speed should be slow (6s cycle) to communicate stability, not hype.
+
+Styling:
+- Use the same dark grid background, but reduce its visibility so the graph stands out.
+- Use a neon purple/blue glow style, but make it subtle and premium (reduce glow bloom by 25%).
+- Each module box should have a floating depth shadow and soft inner glow.
+- The center node (the text block) should have a very faint glow ring behind it to visually anchor it as the core of the system.
+- All text stays exactly the same, do not change any words.
+
+Graph placement:
+- Arrange modules around the center like a network:
+  Top left: Intake
+  Top right: Scheduling
+  Left middle: Communication
+  Right middle: Quoting
+  Bottom left: CRM
+  Bottom right: Payments
+- Use smooth, balanced bezier curves for connections.
+- Everything should be symmetrically centered.
+
+Hierarchy:
+- The user should read the headline first, then the paragraph, and then visually explore the network around it.
+- The modules should be visually secondary to the text content.
+- The buttons should sit underneath the entire graph block with extra spacing.
+
+Micro-details:
+- Add a small label under the graph: “Automation Backbone” in 40% opacity, spaced lettering, centered.
+- Slow down all pulse animations.
+- Do not add any large glowing outlines around everything.
+- Keep everything centered and clean.
+
+Do not change:
+- Any copy text
+- Any wording
+- Button labels
+- Button positions relative to each other
+- Color palette
+
+The goal is a premium, futuristic automation network wrapped around the About section, not a flat UI diagram.

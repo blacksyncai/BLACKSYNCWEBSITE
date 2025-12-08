@@ -5,7 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
-import { InlineAutomationGraph } from "@/components/ui/inline-automation-graph";
+import { RadialAutomationNetwork } from "@/components/ui/radial-automation-network";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -34,11 +34,11 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
+      {/* Hero Section - Radial Network */}
+      <section className="pt-24 pb-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050509] via-[#070a10] to-[#050509]" />
         <div 
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.015]"
           style={{
             backgroundImage: `
               linear-gradient(to right, #06b6d4 1px, transparent 1px),
@@ -48,33 +48,33 @@ export default function About() {
           }}
         />
         
-        <div className="relative z-10 container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-center text-center max-w-3xl mx-auto"
-          >
-            <div className="flex items-center gap-2.5 mb-6">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
-              </span>
-              <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-              About BlackSync
-            </h1>
-            
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl mb-8">
-              BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
-            </p>
-            
-            <div className="mb-10">
-              <InlineAutomationGraph />
-            </div>
-            
+        <div className="relative z-10">
+          <RadialAutomationNetwork>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex flex-col items-center"
+            >
+              <div className="flex items-center gap-2.5 mb-4">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
+                </span>
+                <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
+              </div>
+              
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 leading-tight">
+                About BlackSync
+              </h1>
+              
+              <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-md mb-6">
+                BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+              </p>
+            </motion.div>
+          </RadialAutomationNetwork>
+          
+          <div className="flex flex-col items-center mt-8">
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <div className="border border-slate-600/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
                 style={{ boxShadow: '0 0 10px rgba(100, 116, 139, 0.08)' }}>
@@ -86,7 +86,7 @@ export default function About() {
               </div>
             </div>
             
-            <p className="text-gray-500/60 text-sm mt-4">
+            <p className="text-gray-500/60 text-sm mt-2">
               Automation you don't have to think about.
             </p>
             
@@ -94,7 +94,7 @@ export default function About() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5, duration: 1 }}
-              className="mt-12"
+              className="mt-10"
             >
               <motion.div
                 animate={{ y: [0, 5, 0] }}
@@ -114,7 +114,7 @@ export default function About() {
                 </svg>
               </motion.div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
