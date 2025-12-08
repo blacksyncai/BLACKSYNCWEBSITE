@@ -1,0 +1,35 @@
+Rebuild the About BlackSync section using the existing text and the same visual style as the previous neon graph version, but change the layout so the graph wraps around the headline and paragraph instead of sitting on the left.
+
+Layout structure:
+- Center the text block (title, paragraph, badge, buttons) in the middle of the section.
+- Position the modules (Intake, Scheduling, Payments, Quoting, Communication, CRM) around the text block in an orbital layout.
+- The text block should feel like the central node, and the modules should appear like connected systems around it.
+- Lines should connect modules around the text, with motion subtly traveling across lines.
+- The layout must be visually balanced and comfortable for the eye — not random.
+
+Visual style:
+- Use the same neon glow edge as before: purple/blue holographic glow with cyan accents.
+- Keep the deep-tech grid background.
+- Nodes: dark rounded rectangles with soft inner glow, neon outline.
+- Lines: thin curved lines, with small pulse dots traveling every 4 seconds.
+- The color motion should smoothly shift between deep blue and purple for the glow.
+- Animations should be slow, stable, and premium — no fast or loud movement.
+
+Motion:
+- Nodes have a subtle breathing animation (2% scale pulse every 6 seconds).
+- The grid background has a slight animated shimmer, very subtle.
+- Pulse dot travels through each connection path in a loop.
+
+Content:
+Use this exact wording with no changes:
+Title: "About BlackSync"
+Paragraph: "BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication."
+Badge: "Available Now"
+Buttons: "We don't build chatbots." and "We build infrastructure."
+
+Below the buttons, add a low-opacity line:
+"Automation you don’t have to think about."
+
+Design tone:
+- Comfort through power: the viewer should feel that BlackSync is a stable system quietly running in the background.
+- No hyper minimalism. No tiny layout. The graph should be large and eye-catching, but organized and balanced around the text.
