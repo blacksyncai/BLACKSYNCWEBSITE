@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import PuzzleSection from "../PuzzleSection";
 
 export default function TrustedBy() {
   const companies = [
@@ -11,11 +12,12 @@ export default function TrustedBy() {
   ];
 
   return (
-    <section className="py-16 bg-gradient-to-b from-[#050509] to-[#0B0D12] relative overflow-hidden border-b border-white/5">
-      {/* Background glow */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent blur-3xl" />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <PuzzleSection>
+      <div className="py-16 relative overflow-hidden border-b border-white/5">
+        {/* Background glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent blur-3xl" />
+        
+        <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +97,8 @@ export default function TrustedBy() {
             </div>
           </div>
         </motion.div>
+        </div>
       </div>
-    </section>
+    </PuzzleSection>
   );
 }

@@ -1,0 +1,21 @@
+.puzzle-section {
+  position: relative;
+  background: radial-gradient(ellipse at center, #0B0D12 0%, #050509 100%);
+  overflow: hidden;
+}
+
+.puzzle-overlay {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 130%;
+  opacity: 0.06;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.puzzle-content {
+  position: relative;
+  z-index: 1;
+}
