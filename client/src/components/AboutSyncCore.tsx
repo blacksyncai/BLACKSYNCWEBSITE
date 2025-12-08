@@ -18,11 +18,11 @@ export default function AboutSyncCore() {
           style={{
             maxWidth: '900px',
             padding: '80px 60px',
-            background: 'rgba(0, 0, 0, 0.85)',
-            backdropFilter: 'blur(18px)',
+            background: 'linear-gradient(180deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.90) 100%)',
+            backdropFilter: 'blur(16px)',
             borderRadius: '28px',
-            border: '1px solid rgba(255,255,255,0.05)',
-            boxShadow: '0 0 80px rgba(80, 0, 180, 0.25), 0 0 200px rgba(0, 180, 255, 0.15)',
+            border: '1px solid rgba(255,255,255,0.04)',
+            boxShadow: '0 0 80px rgba(80, 0, 200, 0.25), 0 0 120px rgba(0,200,255,0.15)',
             maskImage: 'radial-gradient(circle at center, black 70%, transparent 100%)',
             maskSize: '180% 180%',
             maskPosition: 'center',
@@ -34,22 +34,48 @@ export default function AboutSyncCore() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-white text-5xl font-bold mb-4">
+          <h2
+            style={{
+              fontSize: '44px',
+              fontWeight: 700,
+              lineHeight: 1.1,
+              color: '#FFFFFF',
+              marginBottom: '16px',
+            }}
+          >
             About BlackSync
           </h2>
 
-          <p className="text-gray-300 leading-relaxed text-lg mb-4">
+          <p
+            style={{
+              color: 'rgba(255,255,255,0.85)',
+              fontSize: '18px',
+              lineHeight: 1.48,
+              maxWidth: '800px',
+              margin: '0 auto 16px auto',
+            }}
+          >
             BlackSync builds AI operational systems — the core infrastructure that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
           </p>
 
-          <p className="text-gray-300 leading-relaxed text-lg mb-4">
+          <p
+            style={{
+              color: 'rgba(255,255,255,0.85)',
+              fontSize: '18px',
+              lineHeight: 1.48,
+              maxWidth: '800px',
+              margin: '0 auto',
+            }}
+          >
             Our systems integrate directly into your existing tools to eliminate repetitive manual work, increase reliability, and scale operations efficiently.
           </p>
 
           <p
             style={{
-              fontSize: '0.95rem',
-              color: 'rgba(255,255,255,0.8)',
+              color: 'rgba(255,255,255,0.6)',
+              fontSize: '15px',
+              marginTop: '24px',
+              fontStyle: 'italic',
               textAlign: 'center',
             }}
           >
