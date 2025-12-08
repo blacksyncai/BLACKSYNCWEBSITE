@@ -5,7 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
-import { OrbitalAutomationGraph } from "@/components/ui/orbital-automation-graph";
+import { InlineAutomationGraph } from "@/components/ui/inline-automation-graph";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -34,75 +34,85 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section - Orbital Layout */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050509] via-[#070a10] to-[#050509]" />
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, #06b6d4 1px, transparent 1px),
+              linear-gradient(to bottom, #8b5cf6 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
         
-        <div className="relative z-10">
-          <OrbitalAutomationGraph>
+        <div className="relative z-10 container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col items-center text-center max-w-3xl mx-auto"
+          >
+            <div className="flex items-center gap-2.5 mb-6">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
+              </span>
+              <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+              About BlackSync
+            </h1>
+            
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-2 max-w-xl">
+              BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+            </p>
+            
+            <InlineAutomationGraph />
+            
+            <div className="flex flex-col sm:flex-row gap-3 mb-4">
+              <div className="border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
+                style={{ boxShadow: '0 0 15px rgba(6, 182, 212, 0.1)' }}>
+                We don't build chatbots.
+              </div>
+              <div className="border border-purple-500/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-purple-300 font-semibold text-sm rounded-lg"
+                style={{ boxShadow: '0 0 15px rgba(139, 92, 246, 0.15)' }}>
+                We build infrastructure.
+              </div>
+            </div>
+            
+            <p className="text-gray-500/50 text-sm mt-2">
+              Automation you don't have to think about.
+            </p>
+            
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="flex flex-col items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5, duration: 1 }}
+              className="mt-12"
             >
-              <div className="flex items-center gap-2.5 mb-6">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
-                </span>
-                <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
-                About BlackSync
-              </h1>
-              
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-lg">
-                BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 mb-4">
-                <div className="border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
-                  style={{ boxShadow: '0 0 15px rgba(6, 182, 212, 0.1)' }}>
-                  We don't build chatbots.
-                </div>
-                <div className="border border-purple-500/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-purple-300 font-semibold text-sm rounded-lg"
-                  style={{ boxShadow: '0 0 15px rgba(139, 92, 246, 0.15)' }}>
-                  We build infrastructure.
-                </div>
-              </div>
-              
-              <p className="text-gray-500/50 text-sm mt-4">
-                Automation you don't have to think about.
-              </p>
-              
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5, duration: 1 }}
-                className="mt-12"
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="flex items-center gap-3"
               >
-                <motion.div
-                  animate={{ y: [0, 5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="flex items-center gap-3"
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 font-medium text-sm tracking-wide">
+                  scroll it's worth it 😉
+                </span>
+                <svg 
+                  className="w-4 h-4 text-cyan-400/70" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
                 >
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 font-medium text-sm tracking-wide">
-                    scroll it's worth it 😉
-                  </span>
-                  <svg 
-                    className="w-4 h-4 text-cyan-400/70" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                  </svg>
-                </motion.div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
               </motion.div>
             </motion.div>
-          </OrbitalAutomationGraph>
+          </motion.div>
         </div>
       </section>
 
