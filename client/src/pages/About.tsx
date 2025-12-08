@@ -5,6 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
+import { AutomationGraph } from "@/components/ui/automation-graph";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -33,56 +34,94 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Hero Section - Asymmetric Layout */}
       <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto"
-          >
-            <GridBackground
-              title="About BlackSync"
-              description="BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication."
-              showAvailability={true}
-              className="rounded-2xl"
+        <div className="absolute inset-0 bg-[#050509]" />
+        <div className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, #0ea5e9 1px, transparent 1px),
+              linear-gradient(to bottom, #0ea5e9 1px, transparent 1px)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
+        
+        <div className="relative z-10 px-6 md:px-16 lg:px-[120px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[70vh]">
+            
+            {/* Right Side - Text Content (shows first on mobile) */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start"
             >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center text-lg mt-8">
-                <div className="bg-white/5 border border-white/10 rounded-full px-6 py-3">
-                  <span className="text-gray-400">We don't build chatbots.</span>
+              <div className="flex items-center gap-2 mb-6">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span className="text-emerald-400 text-sm font-mono tracking-wide">Available Now</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+                About BlackSync
+              </h1>
+              
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-lg">
+                BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <div className="border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm">
+                  We don't build chatbots.
                 </div>
-                <div className="bg-primary/20 border border-primary/30 rounded-full px-6 py-3">
-                  <span className="text-primary font-semibold">We build infrastructure.</span>
+                <div className="border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm px-5 py-3 text-cyan-400 font-semibold text-sm">
+                  We build infrastructure.
                 </div>
               </div>
-            </GridBackground>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-            className="flex flex-col items-center mt-12 gap-3"
-          >
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="flex flex-col items-center"
-            >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-purple-500 font-medium text-lg tracking-wide">
-                scroll it's worth it 😉
-              </span>
-              <svg 
-                className="w-6 h-6 text-primary mt-2 opacity-70" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 0.5 }}
+                className="mt-12"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
+                <motion.div
+                  animate={{ y: [0, 6, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  className="flex items-center gap-3"
+                >
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-primary to-purple-500 font-medium text-sm tracking-wide">
+                    scroll it's worth it 😉
+                  </span>
+                  <svg 
+                    className="w-4 h-4 text-cyan-400" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </motion.div>
+              </motion.div>
             </motion.div>
-          </motion.div>
+            
+            {/* Left Side - Automation Graph (shows second on mobile) */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="lg:col-span-7 order-2 lg:order-1 relative"
+            >
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/10 via-primary/5 to-transparent blur-3xl" />
+              <div className="relative aspect-[16/10] lg:aspect-[16/9]">
+                <AutomationGraph className="w-full h-full" />
+              </div>
+            </motion.div>
+            
+          </div>
         </div>
       </section>
 
