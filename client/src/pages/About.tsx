@@ -86,15 +86,15 @@ export default function About() {
                 </div>
                 <h3 className="text-xl font-bold text-white">AI Operators (Voice + Chat)</h3>
               </div>
-              <p className="text-primary font-medium mb-6">Autonomous, integrated, business-aware.</p>
+              <p className="text-primary font-medium mb-6">Autonomous agents that run customer operations — not chat.</p>
               <ul className="space-y-3">
                 {[
-                  { icon: Phone, text: "Real-time call handling" },
-                  { icon: Users, text: "Lead qualification & routing" },
-                  { icon: Calendar, text: "Scheduling logic & calendar control" },
-                  { icon: FileText, text: "Quote generation with pricing rules" },
-                  { icon: MessageSquare, text: "Multi-channel follow-up (SMS, email, WhatsApp)" },
-                  { icon: Database, text: "CRM updates & workflow triggers" },
+                  { icon: Phone, text: "Answers calls instantly" },
+                  { icon: Users, text: "Qualifies and routes leads" },
+                  { icon: Calendar, text: "Books appointments" },
+                  { icon: FileText, text: "Generates quotes" },
+                  { icon: MessageSquare, text: "Sends follow-ups on every channel" },
+                  { icon: Database, text: "Updates CRM with notes and triggers" },
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-gray-300">
                     <item.icon className="h-4 w-4 text-primary" />
@@ -103,7 +103,7 @@ export default function About() {
                 ))}
               </ul>
               <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="text-gray-400 italic">These aren't scripts.<br /><span className="text-white font-semibold">These are operational agents.</span></p>
+                <p className="text-white font-semibold">Not scripts. Not chatbots. Real operators.</p>
               </div>
             </motion.div>
 
@@ -118,18 +118,17 @@ export default function About() {
                 <div className="p-3 rounded-xl bg-cyan-500/20 text-cyan-400">
                   <Cog className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold text-white">Workflow Engines & System Automation</h3>
+                <h3 className="text-xl font-bold text-white">Workflow Engines & Automation</h3>
               </div>
-              <p className="text-cyan-400 font-medium mb-6">We build the internal engines that run daily operations:</p>
+              <p className="text-cyan-400 font-medium mb-6">The systems that make operations predictable and automatic.</p>
               <ul className="space-y-3">
                 {[
-                  "Lead revival systems",
-                  "Missed calls? Doesn't happen. AI re-routes so you never miss a call or use voicemail again",
-                  "Automated payment & invoice flows",
-                  "Data enrichment & pipeline cleanup",
-                  "Routing, compliance, SLA logic",
-                  "Multi-system syncing & reporting",
-                  "Embedded business logic",
+                  "Revives contacts and missed leads",
+                  "Eliminates missed calls",
+                  "Automates payments and invoices",
+                  "Cleans and syncs data",
+                  "Enforces routing and logic",
+                  "Connects tools without manual work",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-gray-300">
                     <div className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
@@ -138,7 +137,7 @@ export default function About() {
                 ))}
               </ul>
               <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="text-white font-semibold">Your operation becomes predictable, consistent, and fast.</p>
+                <p className="text-white font-semibold">Your operations run the same way, every time.</p>
               </div>
             </motion.div>
           </div>
