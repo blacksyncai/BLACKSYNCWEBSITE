@@ -38,13 +38,16 @@ export default function AboutSyncCore() {
             About BlackSync
           </h2>
 
-          <p className="text-gray-300 leading-relaxed text-lg">
-            BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication, integrated directly into your existing tools.
+          <p className="text-gray-300 leading-relaxed text-lg mb-4">
+            BlackSync builds AI operational systems — the core infrastructure that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+          </p>
+
+          <p className="text-gray-300 leading-relaxed text-lg mb-4">
+            Our systems integrate directly into your existing tools to eliminate repetitive manual work, increase reliability, and scale operations efficiently.
           </p>
 
           <p
             style={{
-              marginTop: '14px',
               fontSize: '0.95rem',
               color: 'rgba(255,255,255,0.8)',
               textAlign: 'center',
