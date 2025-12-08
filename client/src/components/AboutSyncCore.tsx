@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
 
-const endpoints = [
-  { label: "Intake", angle: -115 },
-  { label: "Scheduling", angle: -35 },
-  { label: "Quoting", angle: 10 },
-  { label: "Payments", angle: 75 },
-  { label: "CRM", angle: 145 },
-  { label: "Communication", angle: 215 },
-];
-
 export default function AboutSyncCore() {
   return (
     <div className="relative w-full flex flex-col items-center justify-center pt-52 pb-56 select-none">
@@ -60,6 +51,30 @@ export default function AboutSyncCore() {
         }}
       />
 
+      {/* ANIMATED ORBIT RING */}
+      <motion.div
+        className="absolute rounded-full"
+        style={{
+          offsetPath: "path('M -190 -120 H 190 V 120 H -190 Z')",
+          outline: "3px solid transparent",
+          outlineOffset: "12px",
+        }}
+        animate={{
+          offsetDistance: ["0%", "100%"],
+          outlineColor: [
+            "rgb(0,255,200)",
+            "rgb(0,180,255)",
+            "rgb(160,0,255)",
+            "rgb(0,255,200)"
+          ],
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      />
+
       {/* CURVED NEON NETWORK */}
       <motion.div
         style={{ perspective: 1000 }}
@@ -68,34 +83,6 @@ export default function AboutSyncCore() {
       >
         <NetworkCurves />
       </motion.div>
-
-      {/* ENDPOINT MODULES */}
-      {endpoints.map((e, i) => {
-        const radius = 380;
-        const x = radius * Math.cos((e.angle * Math.PI) / 180);
-        const y = radius * Math.sin((e.angle * Math.PI) / 180);
-
-        return (
-          <motion.div
-            key={i}
-            className="absolute z-20 px-4 py-2 font-medium text-white text-sm rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_40px_rgba(140,0,255,0.35)]"
-            style={{
-              top: `calc(50% + ${y}px)`,
-              left: `calc(50% + ${x}px)`,
-            }}
-            animate={{
-              y: [0, 2, 0, -2, 0],
-              transition: {
-                duration: 5,
-                repeat: Infinity,
-                delay: i * 0.2,
-              },
-            }}
-          >
-            {e.label}
-          </motion.div>
-        );
-      })}
     </div>
   );
 }
