@@ -14,15 +14,21 @@ export default function AboutSyncCore() {
         <OrbitCloud count={30} />
 
         <motion.div
-          className="relative z-20 text-center max-w-2xl px-14 py-14"
+          className="relative z-20 text-center"
           style={{
+            maxWidth: '900px',
+            padding: '80px 60px',
             background: 'rgba(0, 0, 0, 0.85)',
             backdropFilter: 'blur(18px)',
             borderRadius: '28px',
             border: '1px solid rgba(255,255,255,0.05)',
             boxShadow: '0 0 80px rgba(80, 0, 180, 0.25), 0 0 200px rgba(0, 180, 255, 0.15)',
-            maskImage: 'radial-gradient(circle at center, black 55%, transparent 100%)',
-            WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 100%)',
+            maskImage: 'radial-gradient(circle at center, black 70%, transparent 100%)',
+            maskSize: '180% 180%',
+            maskPosition: 'center',
+            WebkitMaskImage: 'radial-gradient(circle at center, black 70%, transparent 100%)',
+            WebkitMaskSize: '180% 180%',
+            WebkitMaskPosition: 'center',
           }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
