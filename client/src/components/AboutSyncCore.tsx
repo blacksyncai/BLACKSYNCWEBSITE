@@ -9,12 +9,12 @@ export default function AboutSyncCore() {
       {/* Halo behind the core */}
       <div className="pointer-events-none absolute w-[900px] h-[900px] rounded-full blur-[180px] opacity-60 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]" />
 
-      {/* Core box + orbiting dot */}
-      <div className="relative inline-flex items-center justify-center z-20">
-        <OrbitDot />
+      {/* Core box + orbiting cloud */}
+      <div className="relative inline-flex items-center justify-center">
+        <OrbitCloud count={10} />
 
         <motion.div
-          className="relative bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(0,0,0,0.85)] max-w-2xl text-center border border-slate-700/40"
+          className="relative z-20 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(0,0,0,0.85)] max-w-2xl text-center border border-slate-700/40"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
@@ -39,26 +39,69 @@ export default function AboutSyncCore() {
   );
 }
 
-/**
- * Glowing dot that orbits around the box.
- * It works by rotating a container that's slightly larger than the box.
- */
-function OrbitDot() {
+function OrbitCloud({ count }: { count: number }) {
+  const orbits = Array.from({ length: count }, (_, i) => ({
+    radius: 140 + i * 30,
+    startAngle: Math.random() * 360,
+    speed: 6 + Math.random() * 3,
+    dotSize: 5 + Math.random() * 3,
+  }));
+
   return (
-    <motion.div
-      className="pointer-events-none absolute inset-[-30px] rounded-[32px]"
-      animate={{ rotate: 360 }}
-      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-    >
-      {/* The dot sits at the top; rotating parent makes it orbit the box */}
-      <div className="absolute -top-2 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(0,255,200,0.9)]" />
-    </motion.div>
+    <div className="absolute inset-0 z-10 pointer-events-none">
+      <style>{`
+        @keyframes neonColorShift {
+          0% {
+            background-color: rgb(0, 150, 255);
+            box-shadow: 0 0 12px rgba(0, 150, 255, 0.8);
+          }
+          33% {
+            background-color: rgb(0, 255, 220);
+            box-shadow: 0 0 12px rgba(0, 255, 220, 0.8);
+          }
+          66% {
+            background-color: rgb(160, 0, 255);
+            box-shadow: 0 0 12px rgba(160, 0, 255, 0.8);
+          }
+          100% {
+            background-color: rgb(0, 150, 255);
+            box-shadow: 0 0 12px rgba(0, 150, 255, 0.8);
+          }
+        }
+      `}</style>
+      
+      {orbits.map((orbit, i) => (
+        <motion.div
+          key={i}
+          className="absolute left-1/2 top-1/2"
+          style={{
+            width: orbit.radius * 2,
+            height: orbit.radius * 2,
+            marginLeft: -orbit.radius,
+            marginTop: -orbit.radius,
+          }}
+          initial={{ rotate: orbit.startAngle }}
+          animate={{ rotate: 360 + orbit.startAngle }}
+          transition={{ duration: orbit.speed, repeat: Infinity, ease: "linear" }}
+        >
+          <div
+            className="absolute rounded-full"
+            style={{
+              width: orbit.dotSize,
+              height: orbit.dotSize,
+              top: -orbit.dotSize / 2,
+              left: '50%',
+              transform: 'translateX(-50%)',
+              animation: 'neonColorShift 4s ease-in-out infinite',
+              animationDelay: `${i * 0.3}s`,
+            }}
+          />
+        </motion.div>
+      ))}
+    </div>
   );
 }
 
-/**
- * Pulsing neon rings in the background.
- */
 function BackgroundRings() {
   return (
     <svg

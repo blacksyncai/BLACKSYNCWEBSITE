@@ -1,0 +1,54 @@
+I want to upgrade the orbit animation around the About BlackSync box.
+
+Right now the component uses a single “OrbitDot” animation with offsetPath and a small radius. Replace that with a multi-orbit animation using a new component called OrbitCloud.
+
+Follow these steps EXACTLY, with no creative changes:
+
+1. Open the file:
+client/src/components/AboutSyncCore.tsx
+
+2. Find and completely delete the entire OrbitDot component definition, including its export.
+
+3. Where the About box is wrapped (the relative container where OrbitDot was used), replace:
+<OrbitDot />
+with:
+<OrbitCloud count={10} />
+
+Make no other changes to layout or text.
+
+4. In the same file (AboutSyncCore.tsx), directly below the AboutSyncCore component, implement a new component called OrbitCloud that renders 10 glowing dots orbiting the box at different radii.
+
+OrbitCloud requirements:
+- Use React + TypeScript + Framer Motion.
+- Use Array.from({ length: count }) to create 10 ring configs.
+- Each orbit config has:
+  radius: 140 + i * 30,
+  startAngle: Math.random() * 360,
+  speed: 6 + Math.random() * 3,
+  dotSize: 5 + Math.random() * 3.
+- For each orbit, use a motion.div parent with rotation animation:
+  initial={{ rotate: startAngle }}
+  animate={{ rotate: 360 + startAngle }}
+  transition={{ duration: speed, repeat: Infinity, ease: "linear" }}
+
+- Inside each orbit, place a dot positioned at the top center:
+  absolute, top offset = -dotSize/2, left 50%, translateX(-50%).
+
+- The dot glows and changes color using a CSS keyframe animation:
+  blue -> cyan -> purple -> blue loop.
+
+Use a @keyframes neonColorShift block to animate background-color + box-shadow in 0%, 33%, 66%, 100% steps.
+
+5. Make OrbitCloud absolutely positioned inside the same relative wrapper as the About box so the orbits remain centered. Example layer order:
+- Black box: z-20
+- OrbitCloud: z-10
+- Background rings: z-0
+Do not change the background rings.
+
+6. Do NOT change any text content inside the About box.
+Do NOT change font sizes, padding, or styles of the About box.
+Only replace the orbit animation.
+
+7. After you finish these changes, run the project and show me the About BlackSync section.
+
+Do not add anything else. No refactoring. No redesign outside the orbit effect. Just implement OrbitCloud as described.
