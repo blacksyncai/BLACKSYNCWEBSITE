@@ -1,0 +1,99 @@
+import { motion } from "framer-motion";
+
+export default function AboutSyncCore() {
+  return (
+    <section className="relative w-full h-[720px] flex items-center justify-center overflow-hidden">
+      {/* Background neon rings */}
+      <BackgroundRings />
+
+      {/* Halo behind the core */}
+      <div className="pointer-events-none absolute w-[900px] h-[900px] rounded-full blur-[180px] opacity-60 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]" />
+
+      {/* Core box + orbiting dot */}
+      <div className="relative inline-flex items-center justify-center z-20">
+        <OrbitDot />
+
+        <motion.div
+          className="relative bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(0,0,0,0.85)] max-w-2xl text-center border border-slate-700/40"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="text-emerald-400 text-sm flex items-center gap-2 justify-center mb-4">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full" />
+            Available Now
+          </div>
+
+          <h2 className="text-white text-5xl font-bold mb-4">
+            About BlackSync
+          </h2>
+
+          <p className="text-gray-300 leading-relaxed text-lg">
+            BlackSync builds AI operational systems — the automation backbone
+            that runs intake, scheduling, quoting, follow-up, payments, CRM
+            workflows, and customer communication.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Glowing dot that orbits around the box.
+ * It works by rotating a container that's slightly larger than the box.
+ */
+function OrbitDot() {
+  return (
+    <motion.div
+      className="pointer-events-none absolute inset-[-30px] rounded-[32px]"
+      animate={{ rotate: 360 }}
+      transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+    >
+      {/* The dot sits at the top; rotating parent makes it orbit the box */}
+      <div className="absolute -top-2 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-cyan-300 shadow-[0_0_18px_rgba(0,255,200,0.9)]" />
+    </motion.div>
+  );
+}
+
+/**
+ * Pulsing neon rings in the background.
+ */
+function BackgroundRings() {
+  return (
+    <svg
+      className="pointer-events-none absolute w-[1600px] h-[1100px]"
+      viewBox="0 0 700 500"
+    >
+      <defs>
+        <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="rgb(0,255,210)" />
+          <stop offset="40%" stopColor="rgb(60,130,255)" />
+          <stop offset="100%" stopColor="rgb(160,0,255)" />
+        </linearGradient>
+      </defs>
+
+      {[170, 240, 310].map((r, i) => (
+        <motion.circle
+          key={r}
+          cx="350"
+          cy="250"
+          r={r}
+          stroke="url(#neon)"
+          strokeWidth="5"
+          fill="none"
+          initial={{ opacity: 0.35 }}
+          animate={{
+            opacity: [0.35, 0.75, 0.35],
+            filter: ["blur(0px)", "blur(0.8px)", "blur(0px)"],
+          }}
+          transition={{
+            duration: 7 + i * 1.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+    </svg>
+  );
+}
