@@ -83,9 +83,12 @@ export default function AboutSyncCore() {
 function NeonLines() {
   return (
     <svg
-      className="absolute top-1/2 left-1/2 w-[700px] h-[460px] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
+      className="absolute top-1/2 left-1/2 w-[1400px] h-[900px] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
       viewBox="0 0 700 460"
       preserveAspectRatio="none"
+      style={{
+        filter: " blur(0.6px) drop-shadow(0 0 35px rgba(100,0,255,0.35))",
+      }}
     >
       <defs>
         <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
