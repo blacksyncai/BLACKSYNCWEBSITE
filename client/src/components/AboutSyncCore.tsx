@@ -2,87 +2,94 @@ import { motion } from "framer-motion";
 
 export default function AboutSyncCore() {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center pt-52 pb-56 select-none">
+    <div className="flex flex-col items-center justify-center w-full relative">
+      <div className="relative w-full flex flex-col items-center justify-center py-32 select-none">
 
-      {/* HALO GLOW */}
-      <div className="absolute w-[900px] h-[900px] rounded-full blur-[200px] opacity-70 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]"></div>
+        {/* HALO GLOW */}
+        <div className="absolute w-[900px] h-[900px] rounded-full blur-[200px] opacity-70 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]"></div>
 
-      {/* CENTRAL BOX */}
-      <motion.div
-        className="relative z-30 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(120,0,255,0.45)] max-w-2xl text-center border border-slate-600/20"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="text-emerald-400 text-sm flex items-center gap-2 justify-center mb-4">
-          <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
-          Available Now
+        {/* CURVED NEON NETWORK */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <motion.div
+            style={{ perspective: 1000 }}
+            animate={{ y: [-8, 8, -8] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <NetworkCurves />
+          </motion.div>
         </div>
 
-        <h2 className="text-white text-6xl font-bold mb-4">
-          About BlackSync
-        </h2>
+        {/* CENTRAL BOX */}
+        <div className="relative z-10 mx-auto mt-[-40px]">
+          <motion.div
+            className="bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(120,0,255,0.45)] max-w-2xl text-center border border-slate-600/20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <div className="text-emerald-400 text-sm flex items-center gap-2 justify-center mb-4">
+              <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+              Available Now
+            </div>
 
-        <p className="text-gray-300 leading-relaxed text-lg">
-          BlackSync builds AI operational systems — the automation backbone
-          that runs intake, scheduling, quoting, follow-up,
-          payments, CRM workflows, and customer communication.
-        </p>
-      </motion.div>
+            <h2 className="text-white text-6xl font-bold mb-4">
+              About BlackSync
+            </h2>
 
-      {/* ORBIT DOT */}
-      <motion.div
-        animate={{
-          offsetDistance: ["0%", "100%"],
-          backgroundColor: [
-            "rgb(0,255,200)",
-            "rgb(0,180,255)",
-            "rgb(160,0,255)",
-            "rgb(0,255,200)"
-          ],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute w-4 h-4 rounded-full shadow-[0_0_16px_rgba(0,255,240,0.6)]"
-        style={{
-          offsetPath: "path('M -210 -140 H 210 V 140 H -210 Z')",
-        }}
-      />
+            <p className="text-gray-300 leading-relaxed text-lg">
+              BlackSync builds AI operational systems — the automation backbone
+              that runs intake, scheduling, quoting, follow-up,
+              payments, CRM workflows, and customer communication.
+            </p>
+          </motion.div>
+        </div>
 
-      {/* ANIMATED ORBIT RING */}
-      <motion.div
-        className="absolute rounded-full"
-        style={{
-          offsetPath: "path('M -190 -120 H 190 V 120 H -190 Z')",
-          outline: "3px solid transparent",
-          outlineOffset: "12px",
-        }}
-        animate={{
-          offsetDistance: ["0%", "100%"],
-          outlineColor: [
-            "rgb(0,255,200)",
-            "rgb(0,180,255)",
-            "rgb(160,0,255)",
-            "rgb(0,255,200)"
-          ],
-        }}
-        transition={{
-          duration: 7,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-      />
+        {/* ANIMATED ORBIT RING */}
+        <motion.div
+          className="absolute z-20"
+          style={{
+            offsetPath: "path('M -250 -150 H 250 V 150 H -250 Z')",
+            outline: "4px solid transparent",
+            outlineOffset: "14px",
+            borderRadius: "16px",
+          }}
+          animate={{
+            offsetDistance: ["0%", "100%"],
+            outlineColor: [
+              "rgb(0,255,200)",
+              "rgb(0,160,255)",
+              "rgb(180,0,255)",
+              "rgb(0,255,200)"
+            ],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
 
-      {/* CURVED NEON NETWORK */}
-      <motion.div
-        style={{ perspective: 1000 }}
-        animate={{ y: [-8, 8, -8] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <NetworkCurves />
-      </motion.div>
+        {/* ORBIT DOT */}
+        <motion.div
+          animate={{
+            offsetDistance: ["0%", "100%"],
+            backgroundColor: [
+              "rgb(0,255,200)",
+              "rgb(0,180,255)",
+              "rgb(160,0,255)",
+              "rgb(0,255,200)"
+            ],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+          className="absolute z-20 w-4 h-4 rounded-full shadow-[0_0_16px_rgba(0,255,240,0.6)]"
+          style={{
+            offsetPath: "path('M -260 -160 H 260 V 160 H -260 Z')",
+          }}
+        />
+      </div>
     </div>
   );
 }
@@ -90,7 +97,7 @@ export default function AboutSyncCore() {
 function NetworkCurves() {
   return (
     <svg
-      className="absolute top-1/2 left-1/2 w-[1600px] h-[1100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      className="w-[1600px] h-[1100px] pointer-events-none"
       viewBox="0 0 700 500"
     >
       <defs>
