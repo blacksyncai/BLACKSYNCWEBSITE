@@ -14,52 +14,26 @@ export default function AboutSyncCore() {
         <OrbitCloud count={30} />
 
         <motion.div
-          className="relative z-20 rounded-3xl text-center"
+          className="relative z-20 text-center max-w-2xl px-14 py-14"
           style={{
-            background: 'rgba(0,0,0,0.72)',
-            backdropFilter: 'blur(24px)',
-            padding: '70px 80px',
-            boxShadow: '0 0 120px rgba(100,40,255,0.25), inset 0 0 80px rgba(100,40,255,0.10)',
-            maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
-            WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
+            background: 'rgba(0, 0, 0, 0.85)',
+            backdropFilter: 'blur(18px)',
+            borderRadius: '28px',
+            border: '1px solid rgba(255,255,255,0.05)',
+            boxShadow: '0 0 80px rgba(80, 0, 180, 0.25), 0 0 200px rgba(0, 180, 255, 0.15)',
+            maskImage: 'radial-gradient(circle at center, black 55%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 100%)',
           }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1
-            className="text-white font-bold mb-3"
-            style={{
-              fontSize: '3.6rem',
-              fontWeight: 700,
-              letterSpacing: '-0.015em',
-            }}
-          >
+          <h2 className="text-white text-5xl font-bold mb-4">
             About BlackSync
-          </h1>
+          </h2>
 
-          <p
-            className="italic mb-6"
-            style={{
-              fontSize: '1.35rem',
-              fontWeight: 500,
-              color: 'rgba(255,255,255,0.78)',
-            }}
-          >
-            We build AI operational systems
-          </p>
-
-          <p
-            style={{
-              fontSize: '1.08rem',
-              fontWeight: 400,
-              lineHeight: 1.6,
-              maxWidth: '620px',
-              color: 'rgba(255,255,255,0.68)',
-              margin: '0 auto',
-            }}
-          >
-            BlackSync builds the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication. We focus on real-world operations — not chatbots. Our systems integrate with your existing tools, enable reliability at scale, and eliminate repetitive workflows.
+          <p className="text-gray-300 leading-relaxed text-lg">
+            BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication, integrated directly into your existing tools.
           </p>
         </motion.div>
       </div>
