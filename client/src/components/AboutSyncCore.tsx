@@ -40,26 +40,19 @@ export default function AboutSyncCore() {
 }
 
 function OrbitCloud({ count }: { count: number }) {
+  const GOLDEN_ANGLE = 137.5 * (Math.PI / 180);
+
   const orbits = Array.from({ length: count }).map((_, i) => {
-    // organic angle distribution with clustering
-    const start =
-      Math.random() * 360 +
-      (Math.random() > 0.6 ? Math.random() * 50 : 0);
-
-    // radius progression: inner slow, outer faster
+    const angle = i * GOLDEN_ANGLE;
     const radius = 140 + i * 28;
-
-    // base speed: slow and premium feeling
-    const baseSpeed = 16;
-    // speed curve: inner = slower, outer = slightly faster
-    const speed =
-      baseSpeed - i * 0.18 + (Math.random() * 0.5);
+    const speed = 14 + radius * 0.012;
+    const size = 5 + (i % 3) * 0.6;
 
     return {
       radius,
-      start,
+      start: (angle * 180) / Math.PI,
       speed,
-      size: 4.5 + Math.random() * 2.0, // slight dot size variation
+      size,
     };
   });
 
