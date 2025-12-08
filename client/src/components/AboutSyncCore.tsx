@@ -11,7 +11,7 @@ export default function AboutSyncCore() {
 
       {/* Core box + orbiting cloud */}
       <div className="relative inline-flex items-center justify-center">
-        <OrbitCloud count={10} />
+        <OrbitCloud count={30} />
 
         <motion.div
           className="relative z-20 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(0,0,0,0.85)] max-w-2xl text-center border border-slate-700/40"
@@ -43,7 +43,7 @@ function OrbitCloud({ count }: { count: number }) {
   const orbits = Array.from({ length: count }, (_, i) => ({
     radius: 140 + i * 30,
     startAngle: Math.random() * 360,
-    speed: 6 + Math.random() * 3,
+    speed: 14 + Math.random() * 6,
     dotSize: 5 + Math.random() * 3,
   }));
 
@@ -92,7 +92,7 @@ function OrbitCloud({ count }: { count: number }) {
               top: -orbit.dotSize / 2,
               left: '50%',
               transform: 'translateX(-50%)',
-              animation: 'neonColorShift 4s ease-in-out infinite',
+              animation: 'neonColorShift 8s ease-in-out infinite',
               animationDelay: `${i * 0.3}s`,
             }}
           />
