@@ -1,0 +1,116 @@
+import { motion } from "framer-motion";
+
+const endpoints = [
+  { label: "Intake", x: "-22%", y: "-6%" },
+  { label: "Scheduling", x: "-6%", y: "-16%" },
+  { label: "Quoting", x: "6%", y: "-16%" },
+  { label: "Payments", x: "22%", y: "-6%" },
+  { label: "Communication", x: "-10%", y: "18%" },
+  { label: "CRM", x: "10%", y: "18%" },
+];
+
+export default function AboutSyncCore() {
+  return (
+    <div className="relative w-full flex flex-col items-center justify-center py-32 select-none">
+
+      {/* CENTRAL BOX */}
+      <motion.div
+        className="relative z-30 bg-black/80 backdrop-blur-xl rounded-3xl px-12 py-12 shadow-[0_0_80px_rgba(100,0,255,0.35)] max-w-2xl text-center border border-slate-700/40"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <div className="text-emerald-400 text-sm flex items-center gap-2 justify-center mb-4">
+          <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+          Available Now
+        </div>
+
+        <h2 className="text-white text-5xl font-bold mb-4">
+          About BlackSync
+        </h2>
+
+        <p className="text-gray-300 leading-relaxed text-lg">
+          BlackSync builds AI operational systems — the automation backbone
+          that runs intake, scheduling, quoting, follow-up,
+          payments, CRM workflows, and customer communication.
+        </p>
+      </motion.div>
+
+      {/* ORBIT DOT */}
+      <motion.div
+        className="absolute z-20 w-4 h-4 rounded-full"
+        animate={{
+          offsetDistance: ["0%", "100%"],
+          backgroundColor: [
+            "rgba(0,255,180,1)",
+            "rgba(0,140,255,1)",
+            "rgba(190,0,255,1)",
+            "rgba(0,255,180,1)",
+          ],
+        }}
+        transition={{
+          duration: 6,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+        style={{
+          offsetPath: "path('M -180 -110 H 180 V 110 H -180 Z')",
+        }}
+      />
+
+      {/* ENDPOINT NODES */}
+      {endpoints.map((e, i) => (
+        <div
+          key={i}
+          className="absolute z-10 px-4 py-2 text-white text-sm rounded-xl bg-black/60
+          border border-purple-500/40 shadow-[0_0_50px_rgba(140,0,255,0.4)] backdrop-blur-md"
+          style={{
+            top: "50%",
+            left: "50%",
+            transform: `translate(${e.x}, ${e.y})`,
+          }}
+        >
+          {e.label}
+        </div>
+      ))}
+
+      {/* LINES */}
+      <NeonLines />
+    </div>
+  );
+}
+
+function NeonLines() {
+  return (
+    <svg
+      className="absolute top-1/2 left-1/2 w-[700px] h-[460px] -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none"
+      viewBox="0 0 700 460"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="rgb(0,255,200)" />
+          <stop offset="50%" stopColor="rgb(100,100,255)" />
+          <stop offset="100%" stopColor="rgb(200,0,255)" />
+        </linearGradient>
+      </defs>
+
+      <motion.path
+        d="M 350 160 C 250 90 140 90 60 160"
+        stroke="url(#neonGrad)" strokeWidth="4" fill="none" strokeLinecap="round"
+      />
+      <motion.path
+        d="M 350 160 C 450 90 560 90 640 160"
+        stroke="url(#neonGrad)" strokeWidth="4" fill="none" strokeLinecap="round"
+      />
+      <motion.path
+        d="M 350 300 C 250 370 140 370 60 300"
+        stroke="url(#neonGrad)" strokeWidth="4" fill="none" strokeLinecap="round"
+      />
+      <motion.path
+        d="M 350 300 C 450 370 560 370 640 300"
+        stroke="url(#neonGrad)" strokeWidth="4" fill="none" strokeLinecap="round"
+      />
+    </svg>
+  );
+}

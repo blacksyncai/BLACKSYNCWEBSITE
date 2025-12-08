@@ -5,7 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
-import { AICoreNetwork } from "@/components/ui/ai-core-network";
+import AboutSyncCore from "@/components/AboutSyncCore";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -34,7 +34,7 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section - AI Core Network */}
+      {/* Hero Section - About Sync Core */}
       <section className="pt-24 pb-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050509] via-[#070a10] to-[#050509]" />
         <div 
@@ -49,65 +49,7 @@ export default function About() {
         />
         
         <div className="relative z-10">
-          <AICoreNetwork>
-            <div className="flex items-center justify-center gap-2.5 mb-5">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
-              </span>
-              <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
-            </div>
-            
-            <h1 className="text-3xl md:text-4xl font-heading font-bold text-white mb-5 leading-tight">
-              About BlackSync
-            </h1>
-            
-            <p className="text-base md:text-lg text-gray-400 leading-relaxed">
-              BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
-            </p>
-          </AICoreNetwork>
-          
-          <div className="flex flex-col items-center mt-12">
-            <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <div className="border border-slate-600/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
-                style={{ boxShadow: '0 0 10px rgba(100, 116, 139, 0.08)' }}>
-                We don't build chatbots.
-              </div>
-              <div className="border border-purple-500/40 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-purple-300 font-semibold text-sm rounded-lg"
-                style={{ boxShadow: '0 0 18px rgba(139, 92, 246, 0.2), 0 0 6px rgba(139, 92, 246, 0.15)' }}>
-                We build infrastructure.
-              </div>
-            </div>
-            
-            <p className="text-gray-500/60 text-sm mt-2">
-              Automation you don't have to think about.
-            </p>
-            
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              className="mt-10"
-            >
-              <motion.div
-                animate={{ y: [0, 5, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="flex items-center gap-3"
-              >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 font-medium text-sm tracking-wide">
-                  scroll it's worth it 😉
-                </span>
-                <svg 
-                  className="w-4 h-4 text-cyan-400/70" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </motion.div>
-            </motion.div>
-          </div>
+          <AboutSyncCore />
         </div>
       </section>
 
