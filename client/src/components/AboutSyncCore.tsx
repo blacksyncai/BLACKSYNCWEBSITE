@@ -14,24 +14,52 @@ export default function AboutSyncCore() {
         <OrbitCloud count={30} />
 
         <motion.div
-          className="relative z-20 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(0,0,0,0.85)] max-w-2xl text-center border border-slate-700/40"
+          className="relative z-20 rounded-3xl text-center"
+          style={{
+            background: 'rgba(0,0,0,0.72)',
+            backdropFilter: 'blur(24px)',
+            padding: '70px 80px',
+            boxShadow: '0 0 120px rgba(100,40,255,0.25), inset 0 0 80px rgba(100,40,255,0.10)',
+            maskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
+            WebkitMaskImage: 'radial-gradient(circle at center, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%)',
+          }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="text-emerald-400 text-sm flex items-center gap-2 justify-center mb-4">
-            <span className="w-2 h-2 bg-emerald-400 rounded-full" />
-            Available Now
-          </div>
-
-          <h2 className="text-white text-5xl font-bold mb-4">
+          <h1
+            className="text-white font-bold mb-3"
+            style={{
+              fontSize: '3.6rem',
+              fontWeight: 700,
+              letterSpacing: '-0.015em',
+            }}
+          >
             About BlackSync
-          </h2>
+          </h1>
 
-          <p className="text-gray-300 leading-relaxed text-lg">
-            BlackSync builds AI operational systems — the automation backbone
-            that runs intake, scheduling, quoting, follow-up, payments, CRM
-            workflows, and customer communication.
+          <p
+            className="italic mb-6"
+            style={{
+              fontSize: '1.35rem',
+              fontWeight: 500,
+              color: 'rgba(255,255,255,0.78)',
+            }}
+          >
+            We build AI operational systems
+          </p>
+
+          <p
+            style={{
+              fontSize: '1.08rem',
+              fontWeight: 400,
+              lineHeight: 1.6,
+              maxWidth: '620px',
+              color: 'rgba(255,255,255,0.68)',
+              margin: '0 auto',
+            }}
+          >
+            BlackSync builds the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication. We focus on real-world operations — not chatbots. Our systems integrate with your existing tools, enable reliability at scale, and eliminate repetitive workflows.
           </p>
         </motion.div>
       </div>
