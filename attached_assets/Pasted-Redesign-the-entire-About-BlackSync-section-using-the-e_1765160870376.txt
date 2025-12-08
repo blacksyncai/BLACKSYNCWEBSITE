@@ -1,0 +1,56 @@
+Redesign the entire "About BlackSync" section using the exact same text content with no changes to wording.
+
+Design Goal:
+Make the section feel comfortable, trustworthy, and reliable. The emotion we want is comfort — visitors should feel safe choosing BlackSync to run their operations.
+
+Layout:
+- Two-column layout
+- The automation graph or visual system diagram on the left
+- All text content on the right
+- Vertically center the text relative to the graph
+- Give the text max-width around 540px for calm reading
+- Subtle spacing, generous padding, clean balance
+
+Visual Style:
+- Minimal, calm, and premium
+- Soft grid background
+- Remove harsh neon, heavy glows, loud colors
+- Use muted blues/greys for nodes
+- Soft edge glow (very subtle)
+- Rounded module edges to feel friendly and stable
+- Thin, clean connecting lines with soft curves
+- Very slow pulse animation on lines and nodes
+- Breathing animation that is calm (6+ second cycle)
+- Equal spacing and alignment for a feeling of order and confidence
+- Remove any sharp or aggressive visuals
+- No large border box around the section
+
+Content:
+Keep all wording exactly the same:
+Title: "About BlackSync"
+Paragraph: "BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication."
+Badge: "Available Now"
+Buttons: "We don't build chatbots." and "We build infrastructure."
+Do not change any words.
+
+Microcopy:
+Below the buttons, add a small line in low opacity:
+"Automation you don’t have to think about."
+(This reinforces comfort without changing your main description)
+
+Motion:
+- When the section scrolls into view:
+  - nodes fade in slowly (staggered)
+  - lines draw in smooth arcs
+  - text slides in softly from the right
+- Animation timing should be slow and smooth to create comfort, not hype
+- No fast or aggressive animations
+
+Responsive:
+- On mobile and tablet, stack layout:
+  - Text on top
+  - Graph below
+- Preserve calm spacing and centered alignment
+
+Do not change any text content.
+Only improve layout, spacing, visuals, and motion to create comfort and trust.

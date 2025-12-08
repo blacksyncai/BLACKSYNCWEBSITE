@@ -34,75 +34,80 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section - Asymmetric Layout */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#050509]" />
-        <div className="absolute inset-0 opacity-5"
+      {/* Hero Section - Calm Asymmetric Layout */}
+      <section className="pt-32 pb-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#050509] via-[#070a0f] to-[#050509]" />
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `
-              linear-gradient(to right, #0ea5e9 1px, transparent 1px),
-              linear-gradient(to bottom, #0ea5e9 1px, transparent 1px)
+              linear-gradient(to right, #64748b 1px, transparent 1px),
+              linear-gradient(to bottom, #64748b 1px, transparent 1px)
             `,
-            backgroundSize: '60px 60px',
+            backgroundSize: '50px 50px',
           }}
         />
         
-        <div className="relative z-10 px-6 md:px-16 lg:px-[120px]">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[70vh]">
+        <div className="relative z-10 px-6 md:px-12 lg:px-[120px]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center min-h-[75vh]">
             
             {/* Right Side - Text Content (shows first on mobile) */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start"
+              transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+              className="lg:col-span-5 order-1 lg:order-2 flex flex-col items-start lg:items-start text-left"
             >
-              <div className="flex items-center gap-2 mb-6">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              <div className="flex items-center gap-2.5 mb-8">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
                 </span>
-                <span className="text-emerald-400 text-sm font-mono tracking-wide">Available Now</span>
+                <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-heading font-bold text-white/95 mb-6 leading-tight">
                 About BlackSync
               </h1>
               
-              <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg text-gray-400 leading-relaxed mb-10 max-w-[540px]">
                 BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="border border-white/10 bg-white/5 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                <div className="border border-slate-700/50 bg-slate-800/30 px-5 py-3 text-gray-400 font-medium text-sm rounded-lg">
                   We don't build chatbots.
                 </div>
-                <div className="border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-sm px-5 py-3 text-cyan-400 font-semibold text-sm">
+                <div className="border border-slate-600/50 bg-slate-700/30 px-5 py-3 text-slate-200 font-medium text-sm rounded-lg">
                   We build infrastructure.
                 </div>
               </div>
               
+              <p className="text-gray-500/60 text-sm mt-2">
+                Automation you don't have to think about.
+              </p>
+              
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ delay: 1, duration: 0.5 }}
-                className="mt-12"
+                transition={{ delay: 1.5, duration: 1 }}
+                className="mt-16"
               >
                 <motion.div
-                  animate={{ y: [0, 6, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  animate={{ y: [0, 4, 0] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   className="flex items-center gap-3"
                 >
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-primary to-purple-500 font-medium text-sm tracking-wide">
+                  <span className="text-gray-500 font-medium text-sm tracking-wide">
                     scroll it's worth it 😉
                   </span>
                   <svg 
-                    className="w-4 h-4 text-cyan-400" 
+                    className="w-4 h-4 text-gray-500" 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                   </svg>
                 </motion.div>
               </motion.div>
@@ -110,12 +115,12 @@ export default function About() {
             
             {/* Left Side - Automation Graph (shows second on mobile) */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
               className="lg:col-span-7 order-2 lg:order-1 relative"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/10 via-primary/5 to-transparent blur-3xl" />
+              <div className="absolute -inset-8 bg-gradient-to-r from-slate-800/10 via-transparent to-transparent blur-3xl opacity-50" />
               <div className="relative aspect-[16/10] lg:aspect-[16/9]">
                 <AutomationGraph className="w-full h-full" />
               </div>
