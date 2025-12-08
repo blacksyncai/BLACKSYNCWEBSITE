@@ -40,12 +40,28 @@ export default function AboutSyncCore() {
 }
 
 function OrbitCloud({ count }: { count: number }) {
-  const orbits = Array.from({ length: count }, (_, i) => ({
-    radius: 140 + i * 30,
-    startAngle: Math.random() * 360,
-    speed: 14 + Math.random() * 6,
-    dotSize: 5 + Math.random() * 3,
-  }));
+  const orbits = Array.from({ length: count }).map((_, i) => {
+    // organic angle distribution with clustering
+    const start =
+      Math.random() * 360 +
+      (Math.random() > 0.6 ? Math.random() * 50 : 0);
+
+    // radius progression: inner slow, outer faster
+    const radius = 140 + i * 28;
+
+    // base speed: slow and premium feeling
+    const baseSpeed = 16;
+    // speed curve: inner = slower, outer = slightly faster
+    const speed =
+      baseSpeed - i * 0.18 + (Math.random() * 0.5);
+
+    return {
+      radius,
+      start,
+      speed,
+      size: 4.5 + Math.random() * 2.0, // slight dot size variation
+    };
+  });
 
   return (
     <div className="absolute inset-0 z-10 pointer-events-none">
@@ -80,16 +96,16 @@ function OrbitCloud({ count }: { count: number }) {
             marginLeft: -orbit.radius,
             marginTop: -orbit.radius,
           }}
-          initial={{ rotate: orbit.startAngle }}
-          animate={{ rotate: 360 + orbit.startAngle }}
+          initial={{ rotate: orbit.start }}
+          animate={{ rotate: 360 + orbit.start }}
           transition={{ duration: orbit.speed, repeat: Infinity, ease: "linear" }}
         >
           <div
             className="absolute rounded-full"
             style={{
-              width: orbit.dotSize,
-              height: orbit.dotSize,
-              top: -orbit.dotSize / 2,
+              width: orbit.size,
+              height: orbit.size,
+              top: -orbit.size / 2,
               left: '50%',
               transform: 'translateX(-50%)',
               animation: 'neonColorShift 8s ease-in-out infinite',
