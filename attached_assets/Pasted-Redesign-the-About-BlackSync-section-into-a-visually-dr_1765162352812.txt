@@ -1,0 +1,84 @@
+Redesign the About BlackSync section into a visually dramatic, premium centerpiece. Keep all text content exactly the same and do not change any wording or remove any elements. I only want a major visual layout change.
+
+New design direction:
+
+1. CORE BLACK BOX
+- Wrap the “About BlackSync” headline and the entire paragraph text inside a solid black rounded rectangle box.
+- This black box must have generous internal padding so the text feels comfortable.
+- Add a subtle glassy depth effect to the black box so it doesn’t look flat. Slight transparent sheen, very low opacity.
+- Place this box ABOVE the neon curved lines layer so the text is perfectly readable.
+- Behind the black box, add a very soft, diffused glow ring (blue-purple) in a circular halo pattern to visually anchor the central core.
+
+2. SIZE / SCALE (zoom effect)
+Make the entire visual bigger, like the camera moved in closer:
+- Increase the size of the black text box by at least 22%
+- Increase the headline font and paragraph font proportionally (not huge, just scaled with the box)
+- Increase the size of each endpoint box by 22%
+- Increase the thickness of each neon curved line by 18%
+- The final result should feel like the viewer is closer to an AI core, not far away.
+
+3. ENDPOINT MODULE BOXES
+At the end of each neon curved line, attach glowing endpoint boxes with these exact labels (copy exactly as written):
+- Intake
+- Scheduling
+- Quoting
+- Payments
+- Communication
+- CRM
+
+These module boxes should:
+- use a dark background, slightly lighter than the black core
+- have subtle inner glow
+- have clean neon edges (blue → purple)
+- be equal size and visually consistent
+- float slightly with a 1-2px hover drift effect (very subtle, no bouncing)
+
+4. CURVED NEON PATHS
+- The neon curved lines should originate visually from behind the black text box, not from the edges of the text. The text box is the “core node” from which they radiate outward.
+- Use smooth bezier curves that look intentional and evenly spaced around the core.
+- The layout should be a balanced radial pattern, centered horizontally in the section.
+- No chaotic overlap or heavy intersections. Everything should feel mathematically spaced, clean, and symmetrical.
+
+5. ORBITING POINTER DOT (important)
+- Add ONE glowing pointer dot that travels around the outside border of the black box, like an orbit path.
+- The dot should follow the rectangular shape of the box, including the rounded corners, not a perfect circle. It must trace the perimeter of the box smoothly.
+- Size: 6-8px
+- Soft glow: yes, but not huge bloom
+- The animation loop should be slow and premium (6 seconds per full orbit).
+- The color of the dot must gradually cycle through NEON GREEN → NEON BLUE → NEON PURPLE → NEON GREEN again, in a smooth gradient transition. No flashing, no instant color jumps.
+
+6. COLOR RELATION
+- When the pointer gets close to a curved neon path, let the path gently shift its edge color to match the pointer color for a short moment (just a soft influence, not a big animation).
+- Background grid remains dark, but reduce intensity by 15% so the neon elements are more dominant.
+
+7. LAYERING ORDER
+- Black core text box is on top
+- Orbiting pointer dot is above curved neon lines
+- Curved neon lines are under the black box
+- Endpoint module boxes sit at the ends of lines, fully visible
+- Text content is never overlapped by lines, dots, or glow
+
+8. POSITIONING / HIERARCHY
+- The central black box must be the visual focus.
+- The endpoints orbit visually around it, like satellites connected to a central AI system.
+- The layout must feel like a network where BlackSync is the core, not a simple diagram.
+- Align everything perfectly center for a premium balanced feeling.
+
+9. BUTTONS
+- Keep the two buttons exactly as-is with no text edits:
+  “We don’t build chatbots.” and “We build infrastructure.”
+- Position the buttons under the entire graphic, with generous spacing above them so the graph feels like a standalone visual.
+- Align buttons centered.
+
+10. DO NOT CHANGE
+- Any text content
+- Any wording
+- Button text
+- Paragraph text
+- Section title
+- No extra shapes or icons beyond what is described
+- No overlapping text
+- No random aura rings around everything
+
+Final goal:
+The About section should look like a central AI core with a black floating box containing the text. Neon energy lines radiate outward to six labeled endpoints, and a single glowing pointer orb continuously orbits the black box, smoothly changing color from neon green to neon blue to neon purple. The scale feels zoomed-in, powerful, premium, and visually impressive, while maintaining full readability and clean structure.

@@ -5,7 +5,7 @@ import { MorphingCardStack } from "@/components/ui/morphing-card-stack";
 import { WarpBackground } from "@/components/ui/warp-background";
 import { LampContainer } from "@/components/ui/lamp";
 import { GridBackground } from "@/components/ui/glowing-card";
-import { RadialAutomationNetwork } from "@/components/ui/radial-automation-network";
+import { AICoreNetwork } from "@/components/ui/ai-core-network";
 import Navbar from "@/components/landing/Navbar";
 import Footer from "@/components/landing/Footer";
 
@@ -34,11 +34,11 @@ export default function About() {
     <div className="min-h-screen bg-[#050509] text-foreground overflow-x-hidden">
       <Navbar />
       
-      {/* Hero Section - Radial Network */}
+      {/* Hero Section - AI Core Network */}
       <section className="pt-24 pb-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#050509] via-[#070a10] to-[#050509]" />
         <div 
-          className="absolute inset-0 opacity-[0.015]"
+          className="absolute inset-0 opacity-[0.012]"
           style={{
             backgroundImage: `
               linear-gradient(to right, #06b6d4 1px, transparent 1px),
@@ -49,32 +49,25 @@ export default function About() {
         />
         
         <div className="relative z-10">
-          <RadialAutomationNetwork>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-center"
-            >
-              <div className="flex items-center gap-2.5 mb-4">
-                <span className="relative flex h-2.5 w-2.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
-                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
-                </span>
-                <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
-              </div>
-              
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 leading-tight">
-                About BlackSync
-              </h1>
-              
-              <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-md mb-6">
-                BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
-              </p>
-            </motion.div>
-          </RadialAutomationNetwork>
+          <AICoreNetwork>
+            <div className="flex items-center justify-center gap-2.5 mb-5">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400/60 opacity-75" style={{ animationDuration: '2s' }}></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500/80"></span>
+              </span>
+              <span className="text-emerald-400/80 text-sm font-medium tracking-wide">Available Now</span>
+            </div>
+            
+            <h1 className="text-3xl md:text-4xl font-heading font-bold text-white mb-5 leading-tight">
+              About BlackSync
+            </h1>
+            
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed">
+              BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
+            </p>
+          </AICoreNetwork>
           
-          <div className="flex flex-col items-center mt-8">
+          <div className="flex flex-col items-center mt-12">
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
               <div className="border border-slate-600/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
                 style={{ boxShadow: '0 0 10px rgba(100, 116, 139, 0.08)' }}>
