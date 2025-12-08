@@ -53,23 +53,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-16 bg-gradient-to-b from-[#050509] to-[#0B0D12]">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-gradient-to-br from-primary/10 to-cyan-500/10 border border-primary/20 rounded-2xl p-8 md:p-12">
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                Our multi-agent architecture replaces repetitive human workflows with autonomous AI systems that operate with speed, accuracy, and full integration into your data stack.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* What We Power */}
       <section className="py-20 bg-[#0B0D12] relative overflow-hidden">
