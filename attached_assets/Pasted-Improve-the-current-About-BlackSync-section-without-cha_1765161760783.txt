@@ -1,0 +1,61 @@
+Improve the current About BlackSync section without changing any wording or adding new content.
+
+Keep everything exactly as it is, including:
+- The headline
+- The paragraph text
+- The “Available Now” badge
+- The two buttons
+- The graph nodes: Intake, Scheduling, Quoting, Payments, Communication, CRM
+- The grid background
+- The neon blue/purple visual style
+
+Do not introduce any new shapes, outlines, or large frames.
+
+Make these specific improvements:
+
+SPACING:
+- Increase the vertical spacing between the paragraph text and the graph by 24px so the graph has more breathing room.
+- Increase the vertical spacing between the graph and the buttons by 28px for a clean visual break.
+
+GRAPH SIZE:
+- Reduce each graph node size by about 10% so the text content remains the primary focus and the graph clearly sits underneath it.
+- Keep all nodes centered horizontally under the paragraph.
+
+GLOW:
+- Reduce the glow intensity of the nodes by 20% for a premium deep-tech look instead of a gaming style.
+- Keep the neon edges, just lower the bloom.
+- Keep the purple/blue animated gradient, but make the animation more subtle.
+
+ANIMATIONS:
+- Slow down the pulse animation across the connecting lines to a 6-second cycle instead of a fast loop. Slow pulse communicates stability.
+- Add a small pulse dot that travels along the path from Intake > Scheduling > Quoting > Payments > CRM > Communication every 6 seconds. The dot should be subtle, 6px size, soft glow.
+
+ALIGNMENT:
+- Make sure the graph is perfectly centered relative to the headline and paragraph, not based on approximate positioning.
+- Check that the graph alignment is mathematically centered in the container.
+
+MICRO TEXT:
+- Under the graph and above the buttons, add a thin, subtle label in small uppercase text at 35% opacity:
+  “BLACKSYNC — AUTOMATION BACKBONE”
+  Letter spacing: wider spacing
+  Font size small
+  Center aligned
+
+MICROCOPY:
+- Keep the existing line “Automation you don’t have to think about.” but reduce its opacity to 60% and place it immediately below the buttons with 16px spacing.
+
+BUTTON EMPHASIS:
+- Slightly emphasize the “We build infrastructure.” button to make it a visual primary action:
+  - Keep the same size
+  - Add a subtle purple glow or brighter border compared to the “We don’t build chatbots.” button
+  - Make sure this is subtle, not dramatic.
+
+DO NOT:
+- Do not move the headline or paragraph.
+- Do not change any copy.
+- Do not add new large shapes or background elements.
+- Do not reposition the buttons horizontally.
+- Do not change the grid background.
+- Do not make any elements overlap each other.
+
+Final goal: the section feels premium, spacious, centered, stable, and comfortable to view. The graph should look like a clean automation backbone sitting under the text, with slow movement and soft glow.

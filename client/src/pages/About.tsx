@@ -67,24 +67,26 @@ export default function About() {
               About BlackSync
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-2 max-w-xl">
+            <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl mb-8">
               BlackSync builds AI operational systems — the automation backbone that runs intake, scheduling, quoting, follow-up, payments, CRM workflows, and customer communication.
             </p>
             
-            <InlineAutomationGraph />
+            <div className="mb-10">
+              <InlineAutomationGraph />
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-3 mb-4">
-              <div className="border border-cyan-500/20 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
-                style={{ boxShadow: '0 0 15px rgba(6, 182, 212, 0.1)' }}>
+              <div className="border border-slate-600/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-gray-400 font-medium text-sm rounded-lg"
+                style={{ boxShadow: '0 0 10px rgba(100, 116, 139, 0.08)' }}>
                 We don't build chatbots.
               </div>
-              <div className="border border-purple-500/30 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-purple-300 font-semibold text-sm rounded-lg"
-                style={{ boxShadow: '0 0 15px rgba(139, 92, 246, 0.15)' }}>
+              <div className="border border-purple-500/40 bg-slate-900/60 backdrop-blur-sm px-5 py-3 text-purple-300 font-semibold text-sm rounded-lg"
+                style={{ boxShadow: '0 0 18px rgba(139, 92, 246, 0.2), 0 0 6px rgba(139, 92, 246, 0.15)' }}>
                 We build infrastructure.
               </div>
             </div>
             
-            <p className="text-gray-500/50 text-sm mt-2">
+            <p className="text-gray-500/60 text-sm mt-4">
               Automation you don't have to think about.
             </p>
             
