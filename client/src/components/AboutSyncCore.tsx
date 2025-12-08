@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
 
 const endpoints = [
-  { label: "Intake", angle: -110 },
-  { label: "Scheduling", angle: -40 },
-  { label: "Quoting", angle: 20 },
-  { label: "Payments", angle: 80 },
-  { label: "CRM", angle: 150 },
-  { label: "Communication", angle: 220 },
+  { label: "Intake", angle: -115 },
+  { label: "Scheduling", angle: -35 },
+  { label: "Quoting", angle: 10 },
+  { label: "Payments", angle: 75 },
+  { label: "CRM", angle: 145 },
+  { label: "Communication", angle: 215 },
 ];
 
 export default function AboutSyncCore() {
   return (
-    <div className="relative w-full flex flex-col items-center justify-center py-44 select-none">
+    <div className="relative w-full flex flex-col items-center justify-center pt-52 pb-56 select-none">
 
       {/* HALO GLOW */}
-      <div className="absolute w-[900px] h-[900px] rounded-full blur-[160px] opacity-60 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]"></div>
+      <div className="absolute w-[900px] h-[900px] rounded-full blur-[200px] opacity-70 bg-[radial-gradient(circle,_rgba(80,0,255,0.45)_0%,_rgba(0,0,0,0)_65%)]"></div>
 
       {/* CENTRAL BOX */}
       <motion.div
-        className="relative z-30 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(120,0,255,0.45)] max-w-xl text-center border border-slate-600/20"
+        className="relative z-30 bg-black/85 backdrop-blur-2xl rounded-3xl px-14 py-14 shadow-[0_0_140px_rgba(120,0,255,0.45)] max-w-2xl text-center border border-slate-600/20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -27,7 +27,7 @@ export default function AboutSyncCore() {
           Available Now
         </div>
 
-        <h2 className="text-white text-5xl font-bold mb-4">
+        <h2 className="text-white text-6xl font-bold mb-4">
           About BlackSync
         </h2>
 
@@ -61,18 +61,24 @@ export default function AboutSyncCore() {
       />
 
       {/* CURVED NEON NETWORK */}
-      <NetworkCurves />
+      <motion.div
+        style={{ perspective: 1000 }}
+        animate={{ y: [-8, 8, -8] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <NetworkCurves />
+      </motion.div>
 
       {/* ENDPOINT MODULES */}
       {endpoints.map((e, i) => {
-        const radius = 320;
+        const radius = 380;
         const x = radius * Math.cos((e.angle * Math.PI) / 180);
         const y = radius * Math.sin((e.angle * Math.PI) / 180);
 
         return (
           <motion.div
             key={i}
-            className="absolute z-20 px-4 py-2 font-medium text-white text-sm rounded-xl bg-black/60 backdrop-blur-md border border-purple-500/40 shadow-[0_0_40px_rgba(140,0,255,0.35)]"
+            className="absolute z-20 px-4 py-2 font-medium text-white text-sm rounded-xl bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_40px_rgba(140,0,255,0.35)]"
             style={{
               top: `calc(50% + ${y}px)`,
               left: `calc(50% + ${x}px)`,
@@ -102,9 +108,9 @@ function NetworkCurves() {
     >
       <defs>
         <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="rgb(0,255,200)" />
-          <stop offset="40%" stopColor="rgb(0,150,255)" />
-          <stop offset="100%" stopColor="rgb(160,0,255)" />
+          <stop offset="0%" stopColor="rgb(0,255,210)" />
+          <stop offset="40%" stopColor="rgb(60,130,255)" />
+          <stop offset="100%" stopColor="rgb(150,0,255)" />
         </linearGradient>
       </defs>
 
@@ -115,7 +121,7 @@ function NetworkCurves() {
           cy="250"
           r={r}
           stroke="url(#neon)"
-          strokeWidth="4"
+          strokeWidth="5"
           fill="none"
           initial={{ opacity: 0.32 }}
           animate={{
